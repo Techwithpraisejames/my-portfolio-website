@@ -398,6 +398,77 @@ footer a:hover{color:var(--pink)}
   max-width:700px;margin:28px auto 0;text-align:center;
 }
 
+/* ABOUT SECTION */
+.about-section{
+  display:flex;flex-direction:column;align-items:center;
+  justify-content:center;text-align:center;gap:24px;
+  background:radial-gradient(ellipse at 50% 30%,rgba(233,165,222,.06) 0%,transparent 60%);
+}
+.about-content{
+  max-width:680px;text-align:left;
+  display:flex;flex-direction:column;gap:18px;
+}
+.about-content p{
+  font-size:1.05rem;color:var(--text2);line-height:1.8;font-weight:300;
+}
+.about-content strong{color:var(--pink);font-weight:600}
+
+/* PILL CARDS (Writing Style / Expertise) */
+.pill-track{
+  display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:0 max(24px,calc((100vw - 1100px)/2)) 16px;
+  -webkit-overflow-scrolling:touch;
+}
+.pill-track::-webkit-scrollbar{height:4px}
+.pill-card{
+  flex:0 0 260px;scroll-snap-align:start;
+  background:var(--surface);border:1px solid rgba(233,165,222,.1);
+  border-radius:16px;padding:32px;
+  display:flex;flex-direction:column;align-items:center;
+  text-align:center;gap:12px;
+  transition:transform .3s,box-shadow .3s,border-color .3s;
+}
+.pill-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 40px var(--pink-glow);
+  border-color:var(--pink);
+}
+.pill-icon{
+  width:56px;height:56px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(233,165,222,.1);color:var(--pink);
+  font-size:1.5rem;
+}
+.pill-card h3{font-size:1.4rem;font-weight:400;color:var(--text)}
+.pill-card p{font-size:.9rem;color:var(--text2);line-height:1.6;font-weight:300}
+
+/* TESTIMONIAL SECTION */
+.testimonial-card{
+  flex:0 0 360px;scroll-snap-align:start;
+  background:var(--surface);border:1px solid rgba(233,165,222,.1);
+  border-radius:16px;padding:32px;
+  display:flex;flex-direction:column;gap:16px;
+  transition:transform .3s,box-shadow .3s,border-color .3s;
+  position:relative;
+}
+.testimonial-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 40px var(--pink-glow);
+  border-color:var(--pink);
+}
+.testimonial-card .quote-mark{
+  font-size:3rem;line-height:1;color:var(--pink);opacity:.4;
+  font-family:'Gamja Flower',cursive;
+}
+.testimonial-card .quote-text{
+  font-size:.95rem;color:var(--text2);line-height:1.7;
+  font-weight:300;font-style:italic;
+}
+.testimonial-card .quote-author{
+  font-size:.8rem;font-weight:600;color:var(--pink);
+  text-transform:uppercase;letter-spacing:1.5px;margin-top:auto;
+}
+
 /* SECTION LABELS */
 .section-label{
   font-size:1rem;font-weight:400;text-transform:uppercase;
@@ -405,6 +476,7 @@ footer a:hover{color:var(--pink)}
   padding-left:max(24px,calc((100vw - 1100px)/2));
   font-family:'Gamja Flower',cursive;
 }
+.section-label.centered{padding-left:0;text-align:center}
 </style>
 </head>
 <body>
@@ -414,6 +486,7 @@ footer a:hover{color:var(--pink)}
   <a href="#hero">Home</a>
   <a href="#articles">Articles</a>
   <a href="#videos">Videos</a>
+  <a href="#about">About</a>
   <a href="#connect">Connect</a>
   <a href="#newsletter">Newsletter</a>
 </nav>
@@ -497,6 +570,129 @@ footer a:hover{color:var(--pink)}
       See all videos on YouTube &nearr;
     </a>
   </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <p class="section-label centered">About Me</p>
+  <h2 style="font-size:clamp(2rem,5vw,3rem);font-weight:400">The Story Behind the Stories</h2>
+  <div class="about-content">
+    <p>I work with <strong>AI companies</strong> to create product-led content that readers actually understand and use: think technical tutorials, DevTool explainers, thought leadership content, and SEO-driven articles.</p>
+    <p>My background in mathematics and hands-on experience in machine learning means I understand AI at a foundational level.</p>
+    <p>But what truly sets me apart is <strong>storytelling</strong>. I don't simplify content by stripping out depth. Rather, I build narrative arcs around complex concepts so readers follow a clear thread from problem to solution, and understand not just <em>what</em> a product does, but <em>why it matters</em> and <em>how it fits</em> into their workflow.</p>
+    <p>The result is content that positions your product as the long-term solution in your space.</p>
+    <p>If you're building AI tools and need a creator who gets both the tech and the narrative, you're in the right place.</p>
+  </div>
+</section>
+
+<!-- WRITING STYLE — HORIZONTAL SWIPE -->
+<section class="h-section" id="writing-style">
+  <p class="section-label">What I Write</p>
+  <h2>Writing Style</h2>
+  <p class="subtitle">Swipe to see what I create &rarr;</p>
+  <div class="h-track pill-track" id="styleTrack">
+    <div class="pill-card">
+      <div class="pill-icon">&#9997;</div>
+      <h3>Technical Articles</h3>
+      <p>Deep dives into AI concepts, frameworks, and tools &mdash; written so engineers and non-engineers alike can follow along.</p>
+    </div>
+    <div class="pill-card">
+      <div class="pill-icon">&#128221;</div>
+      <h3>How-to Guides</h3>
+      <p>Step-by-step tutorials that take readers from zero to working implementation with clear code examples.</p>
+    </div>
+    <div class="pill-card">
+      <div class="pill-icon">&#128161;</div>
+      <h3>Thought Leadership</h3>
+      <p>Forward-looking pieces that position your brand at the forefront of AI trends and industry conversations.</p>
+    </div>
+    <div class="pill-card">
+      <div class="pill-icon">&#9733;</div>
+      <h3>Product Reviews</h3>
+      <p>Honest, technically grounded reviews that help readers understand what a product does and whether it fits their stack.</p>
+    </div>
+  </div>
+  <div class="swipe-indicator" id="styleDots"></div>
+</section>
+
+<!-- EXPERTISE — HORIZONTAL SWIPE -->
+<section class="h-section" id="expertise">
+  <p class="section-label">Domain Knowledge</p>
+  <h2>Expertise</h2>
+  <p class="subtitle">Swipe to explore &rarr;</p>
+  <div class="h-track pill-track" id="expertiseTrack">
+    <div class="pill-card">
+      <div class="pill-icon">&#129504;</div>
+      <h3>Machine Learning</h3>
+      <p>From decision trees to deep learning &mdash; I break down ML concepts with mathematical clarity and practical examples.</p>
+    </div>
+    <div class="pill-card">
+      <div class="pill-icon">&#128269;</div>
+      <h3>Retrieval Augmented Generation</h3>
+      <p>RAG pipelines, vector databases, and retrieval strategies &mdash; making LLMs smarter with external knowledge.</p>
+    </div>
+    <div class="pill-card">
+      <div class="pill-icon">&#128172;</div>
+      <h3>Natural Language Processing</h3>
+      <p>Text classification, sentiment analysis, transformers, and the full NLP stack explained with narrative depth.</p>
+    </div>
+    <div class="pill-card">
+      <div class="pill-icon">&#9878;</div>
+      <h3>AI Ethics</h3>
+      <p>Bias, fairness, explainability, and responsible AI &mdash; the human side of building intelligent systems.</p>
+    </div>
+  </div>
+  <div class="swipe-indicator" id="expertiseDots"></div>
+</section>
+
+<!-- TESTIMONIALS — HORIZONTAL SWIPE -->
+<section class="h-section" id="testimonials">
+  <p class="section-label">Social Proof</p>
+  <h2>What Clients Say About Me</h2>
+  <p class="subtitle">Swipe to read more &rarr;</p>
+  <div class="h-track" id="testimonialTrack">
+    <div class="testimonial-card">
+      <span class="quote-mark">&ldquo;</span>
+      <p class="quote-text">She's the most amazing writer I've ever met! She's truly dedicated to her craft. A perfectionist, I must say. If a writeup is not perfect, then she's not done writing it. This is one technical writer you'll be glad to have on your team. She's great at what she does and delivers quality work as and when due.</p>
+      <span class="quote-author">Client</span>
+    </div>
+    <div class="testimonial-card">
+      <span class="quote-mark">&ldquo;</span>
+      <p class="quote-text">This is a strong piece. Love how technically-grounded and exhaustive it is.</p>
+      <span class="quote-author">Client</span>
+    </div>
+    <div class="testimonial-card">
+      <span class="quote-mark">&ldquo;</span>
+      <p class="quote-text">This is amazing work! And very well explained.</p>
+      <span class="quote-author">Client</span>
+    </div>
+    <div class="testimonial-card">
+      <span class="quote-mark">&ldquo;</span>
+      <p class="quote-text">Appreciates Praise's writing style, noting it is technical yet simple.</p>
+      <span class="quote-author">Client</span>
+    </div>
+    <div class="testimonial-card">
+      <span class="quote-mark">&ldquo;</span>
+      <p class="quote-text">Good, just a couple comments below. You do amazing work, truly!</p>
+      <span class="quote-author">Client</span>
+    </div>
+    <div class="testimonial-card">
+      <span class="quote-mark">&ldquo;</span>
+      <p class="quote-text">Well-written piece! Will recommend they assign more reviews to you.</p>
+      <span class="quote-author">Client</span>
+    </div>
+    <div class="testimonial-card">
+      <span class="quote-mark">&ldquo;</span>
+      <p class="quote-text">That is beautiful!! What an amazing work!! You should really consider being CCO or something like that, Praise! You are amazing with this, always on time and responsible!</p>
+      <span class="quote-author">Client</span>
+    </div>
+    <div class="testimonial-card">
+      <span class="quote-mark">&ldquo;</span>
+      <p class="quote-text">You are amazing and so responsible! Love it! I will for sure ask for more of your services for some other prototypes and events marketing.</p>
+      <span class="quote-author">Client</span>
+    </div>
+  </div>
+  <div class="swipe-indicator" id="testimonialDots"></div>
 </section>
 
 <!-- CONNECT — HORIZONTAL SWIPE -->
@@ -613,6 +809,9 @@ function setupDots(trackId, dotsId) {
 setupDots('articleTrack', 'articleDots');
 setupDots('socialTrack', 'socialDots');
 setupDots('videoTrack', 'videoDots');
+setupDots('styleTrack', 'styleDots');
+setupDots('expertiseTrack', 'expertiseDots');
+setupDots('testimonialTrack', 'testimonialDots');
 
 // NAV ACTIVE STATE
 const sections = document.querySelectorAll('section');
