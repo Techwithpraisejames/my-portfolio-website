@@ -632,6 +632,7 @@ const observer = new IntersectionObserver(entries => {
 sections.forEach(s => observer.observe(s));
 </script>
 
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
 """
