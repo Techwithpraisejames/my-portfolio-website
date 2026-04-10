@@ -66,14 +66,14 @@ SOCIALS = [
         "url": "https://techwithpraisejames.substack.com/",
         "icon": "newsletter",
         "color": "#FF6719",
-        "description": "Weekly insights on AI, ML & tech",
+        "description": "Weekly insights on technical storytelling",
     },
     {
         "name": "GitHub",
         "url": "https://github.com/Techwithpraisejames",
         "icon": "github",
         "color": "#ffffff",
-        "description": "Open source projects & code",
+        "description": "Beginner-friendly AI projects",
     },
     {
         "name": "LinkedIn",
@@ -106,8 +106,8 @@ HTML_TEMPLATE = r"""
 :root{
   --bg:#000000;--surface:#111111;--surface2:#1a1a1a;
   --text:#ffffff;--text2:#bbbbbb;
-  --pink:#FFB6C1;--pink-bright:#FF69B4;--pink-glow:rgba(255,182,193,.15);
-  --accent:#FFB6C1;--accent2:#FF69B4;
+  --pink:#E9A5DE;--pink-bright:#E9A5DE;--pink-glow:rgba(233,165,222,.15);
+  --accent:#E9A5DE;--accent2:#E9A5DE;
 }
 html{scroll-behavior:smooth;overflow-x:hidden;scroll-snap-type:y mandatory}
 body{
