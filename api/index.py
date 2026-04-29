@@ -649,7 +649,7 @@ footer a:hover{color:var(--pink)}
     <p>My background in mathematics and hands-on experience in machine learning means I understand AI at its core.</p>
     <p>But what truly sets me apart is <strong>storytelling</strong>. I don't simplify content by stripping out depth. Rather, I build narrative arcs around complex concepts so readers follow a clear thread from problem to solution, and understand not just <em>what</em> a product does, but <em>why it matters</em> and <em>how it fits</em> into their workflow.</p>
     <p>The result is content that positions your product as the long-term solution in your space.</p>
-    <p>If you're building AI tools and need a creator who gets both the tech and the narrative, you're in the right place.</p>
+    <p>If you're building AI tools and need a creator who gets both the tech and the narrative, <strong>you're in the right place.</strong></p>
   </div>
 </section>
 
@@ -791,10 +791,9 @@ footer a:hover{color:var(--pink)}
 
 <!-- NEWSLETTER + SEARCH -->
 <section class="newsletter-section" id="newsletter">
-  <p class="section-label">Newsletter</p>
+  <p class="section-label centered" style="color:var(--pink)">Newsletter</p>
   <h2>Tech &amp; Storytelling</h2>
-  <p>A weekly newsletter on technical storytelling</p>
-  <p style="font-size:.9rem;max-width:540px">Lessons, frameworks, and behind-the-scenes insights every week to help you write technical content that actually makes a difference.</p>
+  <p style="color:var(--pink)">A weekly newsletter on technical storytelling. Read lessons, frameworks, and behind-the-scenes insights to help you write technical content that actually makes a difference.</p>
 
   <div class="nl-issues">
     {% for nl in newsletters %}
