@@ -805,12 +805,6 @@ footer a:hover{color:var(--pink)}
     {% endfor %}
   </div>
 
-  <div class="search-wrap">
-    <span class="search-icon">&#128269;</span>
-    <input type="text" id="searchInput" placeholder="Search articles... (e.g. AI, vector databases, Python)"
-           autocomplete="off">
-  </div>
-  <div class="search-results" id="searchResults"></div>
   <a class="cta" href="https://techwithpraisejames.substack.com/" target="_blank"
      style="margin-top:12px">
     Subscribe to Tech &amp; Storytelling &nearr;
