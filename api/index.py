@@ -4,16 +4,28 @@ app = Flask(__name__)
 
 ARTICLES = [
     {
-        "title": "Cold Start Problem in Recommender Systems",
-        "url": "https://www.freecodecamp.org/news/cold-start-problem-in-recommender-systems/",
-        "source": "freeCodeCamp",
-        "tags": ["machine learning", "recommender systems", "AI"],
+        "title": "5 Edge AI Architecture Patterns for Disconnected Environments",
+        "url": "https://dev.to/actiandev/5-edge-ai-architecture-patterns-for-disconnected-environments-27of",
+        "source": "DEV.to",
+        "tags": ["edge AI", "architecture", "databases", "AI"],
     },
     {
         "title": "What's Changing in Vector Databases in 2026",
         "url": "https://dev.to/actiandev/whats-changing-in-vector-databases-in-2026-3pbo",
         "source": "DEV.to",
         "tags": ["databases", "vector databases", "data engineering"],
+    },
+    {
+        "title": "A CTO's 5-Phase Roadmap to AI-Native Internal Tools (And Why Most Pilots Stall)",
+        "url": "https://dev.to/bennykillua/a-ctos-5-phase-roadmap-to-ai-native-internal-tools-and-why-most-pilots-stall-5ea5",
+        "source": "DEV.to",
+        "tags": ["AI", "internal tools", "CTO", "leadership"],
+    },
+    {
+        "title": "Integrating Web Data into AI Knowledge Graphs",
+        "url": "https://data4ai.com/blog/use-case-deep-dives/integrating-web-data-into-ai-knowledge-graphs/",
+        "source": "Data4AI",
+        "tags": ["knowledge graphs", "web data", "AI", "data engineering"],
     },
     {
         "title": "Adversarial Machine Learning: Preventing Bad Actors from Compromising AI Models",
@@ -28,28 +40,16 @@ ARTICLES = [
         "tags": ["AI", "explainability", "XAI"],
     },
     {
+        "title": "Cold Start Problem in Recommender Systems",
+        "url": "https://www.freecodecamp.org/news/cold-start-problem-in-recommender-systems/",
+        "source": "freeCodeCamp",
+        "tags": ["machine learning", "recommender systems", "AI"],
+    },
+    {
         "title": "Decision Trees in Python Scikit-Learn: A Complete Guide for Beginners",
         "url": "https://medium.com/@techwithpraisejames/decision-trees-in-python-scikit-learn-a-complete-guide-for-beginners-15cb0540180f",
         "source": "Medium",
         "tags": ["python", "scikit-learn", "decision trees", "beginners"],
-    },
-    {
-        "title": "5 Edge AI Architecture Patterns for Disconnected Environments",
-        "url": "https://www.actian.com/blog/databases/5-edge-ai-architecture-patterns-for-disconnected-environments/",
-        "source": "Actian",
-        "tags": ["edge AI", "architecture", "databases", "AI"],
-    },
-    {
-        "title": "Integrating Web Data into AI Knowledge Graphs",
-        "url": "https://data4ai.com/blog/use-case-deep-dives/integrating-web-data-into-ai-knowledge-graphs/",
-        "source": "Data4AI",
-        "tags": ["knowledge graphs", "web data", "AI", "data engineering"],
-    },
-    {
-        "title": "A CTO's 5-Phase Roadmap to AI-Native Internal Tools (And Why Most Pilots Stall)",
-        "url": "https://dev.to/bennykillua/a-ctos-5-phase-roadmap-to-ai-native-internal-tools-and-why-most-pilots-stall-5ea5",
-        "source": "DEV.to",
-        "tags": ["AI", "internal tools", "CTO", "leadership"],
     },
 ]
 
