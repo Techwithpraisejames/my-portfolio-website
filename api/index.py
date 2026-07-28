@@ -50,28 +50,28 @@ ARTICLES = [
         "title": "Adversarial Machine Learning: Preventing Bad Actors from Compromising AI Models",
         "url": "https://hackernoon.com/adversarial-machine-learning-is-preventing-bad-actors-from-compromising-ai-models",
         "source": "HackerNoon",
-        "descriptor": "",
+        "descriptor": "A breakdown of how bad actors attack AI models and what it takes to defend against them",
         "tags": ["machine learning", "security", "adversarial AI"],
     },
     {
         "title": "Explainable Artificial Intelligence (XAI): Making Sense of AI Decisions",
         "url": "https://medium.com/@techwithpraisejames/explainable-artificial-intelligence-xai-making-sense-of-ai-decisions-5fa655655490",
         "source": "Medium",
-        "descriptor": "",
+        "descriptor": "Making sense of how AI systems reach their decisions and why that transparency matters",
         "tags": ["AI", "explainability", "XAI"],
     },
     {
         "title": "Cold Start Problem in Recommender Systems",
         "url": "https://www.freecodecamp.org/news/cold-start-problem-in-recommender-systems/",
         "source": "freeCodeCamp",
-        "descriptor": "",
+        "descriptor": "How recommender systems handle new users and items with no historical data to learn from",
         "tags": ["machine learning", "recommender systems"],
     },
     {
         "title": "Decision Trees in Python Scikit-Learn: A Complete Guide for Beginners",
         "url": "https://medium.com/@techwithpraisejames/decision-trees-in-python-scikit-learn-a-complete-guide-for-beginners-15cb0540180f",
         "source": "Medium",
-        "descriptor": "",
+        "descriptor": "A beginner-friendly guide to building and interpreting decision tree models with Scikit-Learn",
         "tags": ["Python", "scikit-learn", "beginners"],
     },
 ]
@@ -155,26 +155,26 @@ body{font-family:'Raleway',sans-serif;background:var(--bg);color:var(--text);ove
 .nav a:hover,.nav a.active{color:#000;background:var(--pink)}
 
 /* SECTIONS */
-section{padding:96px 24px 80px;max-width:1200px;margin:0 auto}
+section{padding:72px 24px 64px;max-width:1200px;margin:0 auto}
 section.full-width{max-width:none;padding-left:0;padding-right:0}
 
 /* SECTION LABEL */
 .label{
   font-family:'Gamja Flower',cursive;
   font-size:.9rem;letter-spacing:3px;text-transform:uppercase;
-  color:var(--pink);margin-bottom:12px;display:block;
+  color:var(--pink);margin-bottom:10px;display:block;
 }
 .label.center{text-align:center}
 
 /* HEADINGS */
-h2{font-family:'Gamja Flower',cursive;font-size:clamp(2.2rem,5vw,3.4rem);font-weight:400;line-height:1.15;margin-bottom:16px}
+h2{font-family:'Gamja Flower',cursive;font-size:clamp(2.2rem,5vw,3.4rem);font-weight:400;line-height:1.15;margin-bottom:14px}
 h3{font-family:'Gamja Flower',cursive;font-size:1.5rem;font-weight:400;margin-bottom:8px}
 
 /* HERO */
 #hero{
   min-height:100vh;display:flex;flex-direction:column;
   justify-content:center;align-items:flex-start;
-  padding-top:100px;padding-bottom:60px;
+  padding-top:80px;padding-bottom:48px;
   position:relative;overflow:hidden;
 }
 #hero::before{
@@ -183,21 +183,37 @@ h3{font-family:'Gamja Flower',cursive;font-size:1.5rem;font-weight:400;margin-bo
   background:radial-gradient(circle,rgba(233,165,222,.06) 0%,transparent 70%);
   pointer-events:none;
 }
+
+/* HERO BADGE — corner-bracket frame */
+@keyframes badgeFade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+@keyframes cornerDraw{from{opacity:0}to{opacity:1}}
 .hero-tag{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:6px 16px;border-radius:30px;
-  border:1px solid rgba(233,165,222,.25);
-  font-size:.78rem;font-weight:600;letter-spacing:1px;
-  text-transform:uppercase;color:var(--pink);margin-bottom:28px;
+  display:inline-block;
+  position:relative;
+  padding:10px 18px;
+  margin-bottom:20px;
+  font-family:'Raleway',sans-serif;
+  font-size:11px;font-weight:600;
+  letter-spacing:.15em;text-transform:uppercase;
+  color:var(--text);
+  background:none;border:none;border-radius:0;
+  animation:badgeFade .5s ease both;
 }
-.hero-tag span{width:6px;height:6px;border-radius:50%;background:var(--pink);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+.hero-tag .corner{
+  position:absolute;width:12px;height:12px;
+  border-color:var(--pink);border-style:solid;
+  animation:cornerDraw .4s ease .6s both;
+}
+.hero-tag .corner.tl{top:0;left:0;border-width:2px 0 0 2px}
+.hero-tag .corner.tr{top:0;right:0;border-width:2px 2px 0 0}
+.hero-tag .corner.bl{bottom:0;left:0;border-width:0 0 2px 2px}
+.hero-tag .corner.br{bottom:0;right:0;border-width:0 2px 2px 0}
 
 .hero-headline{
   font-family:'Gamja Flower',cursive;
   font-size:clamp(2.6rem,7vw,5.2rem);
   font-weight:400;line-height:1.1;
-  margin-bottom:24px;max-width:820px;
+  margin-bottom:18px;max-width:820px;
 }
 .hero-headline .static{display:block;color:var(--text)}
 .hero-headline .typewriter-wrap{
@@ -208,11 +224,17 @@ h3{font-family:'Gamja Flower',cursive;font-size:1.5rem;font-weight:400;margin-bo
 @keyframes blink{0%,100%{border-color:var(--pink)}50%{border-color:transparent}}
 
 .hero-sub{
-  font-size:1.05rem;color:var(--text2);max-width:560px;
-  line-height:1.75;font-weight:300;margin-bottom:36px;
+  font-size:1rem;color:var(--text2);max-width:560px;
+  line-height:1.75;font-weight:300;margin-bottom:28px;
 }
 .hero-sub strong{color:var(--text);font-weight:600}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+
+@media(max-width:640px){
+  #hero{padding-top:72px;padding-bottom:36px}
+  .hero-headline{margin-bottom:14px}
+  .hero-sub{font-size:.95rem;margin-bottom:24px}
+}
 
 /* BUTTONS */
 .btn{
@@ -234,8 +256,8 @@ h3{font-family:'Gamja Flower',cursive;font-size:1.5rem;font-weight:400;margin-bo
   padding:40px 24px;
 }
 .metrics-inner{
-  max-width:1100px;margin:0 auto;
-  display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+  max-width:900px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
 }
 .metric{text-align:center;padding:16px}
 .metric-num{
@@ -244,11 +266,11 @@ h3{font-family:'Gamja Flower',cursive;font-size:1.5rem;font-weight:400;margin-bo
   color:var(--pink);line-height:1;margin-bottom:8px;display:block;
 }
 .metric-label{font-size:.85rem;color:var(--text2);font-weight:400;line-height:1.4}
-@media(max-width:640px){.metrics-inner{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.metrics-inner{grid-template-columns:1fr}}
 
 /* HORIZONTAL TRACK */
-.track-section{padding:80px 0}
-.track-header{padding:0 max(24px,calc((100vw - 1150px)/2));margin-bottom:32px}
+.track-section{padding:64px 0}
+.track-header{padding:0 max(24px,calc((100vw - 1150px)/2));margin-bottom:24px}
 .h-track{
   display:flex;gap:20px;overflow-x:auto;
   padding:4px max(24px,calc((100vw - 1150px)/2)) 20px;
@@ -394,9 +416,10 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
 @media(max-width:640px){
   .nav-inner{overflow-x:auto;padding:0 4px;gap:2px}
   .nav a{padding:7px 12px;font-size:.75rem}
-  section{padding:72px 20px 60px}
+  section{padding:56px 20px 48px}
   .hero-headline{font-size:clamp(2rem,9vw,2.8rem)}
   .art-card{flex:0 0 280px;padding:20px}
+  .track-section{padding:48px 0}
 }
 
 /* DIVIDER */
@@ -420,7 +443,13 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
 
 <!-- HERO -->
 <section id="hero" style="max-width:1200px;margin:0 auto;padding-left:max(24px,calc((100vw - 1200px)/2));padding-right:max(24px,calc((100vw - 1200px)/2))">
-  <div class="hero-tag"><span></span>AI/ML Technical Writer and Developer Relations</div>
+  <div class="hero-tag">
+    <span class="corner tl"></span>
+    <span class="corner tr"></span>
+    <span class="corner bl"></span>
+    <span class="corner br"></span>
+    AI/ML Technical Writer and Developer Relations
+  </div>
   <h1 class="hero-headline">
     <span class="static">I write technical content</span>
     <span class="typewriter-wrap"><span id="typewriter"></span></span>
@@ -443,16 +472,12 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
       <span class="metric-label">organic visits across 50+ articles</span>
     </div>
     <div class="metric">
-      <span class="metric-num">400K+</span>
+      <span class="metric-num">300K+</span>
       <span class="metric-label">impressions in 3 months across LinkedIn and X</span>
     </div>
     <div class="metric">
       <span class="metric-num">500</span>
       <span class="metric-label">Mamba Brief subscribers in month one</span>
-    </div>
-    <div class="metric">
-      <span class="metric-num">9</span>
-      <span class="metric-label">senior technical writers interviewed at Google, Mastercard, Novu</span>
     </div>
   </div>
 </div>
