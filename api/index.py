@@ -432,44 +432,30 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
 }
 .hero-left{display:flex;flex-direction:column;align-items:flex-start}
 
-/* CODE BLOCK */
-@keyframes codeBlockFade{from{opacity:0;transform:rotate(2deg) translateY(16px)}to{opacity:1;transform:rotate(2deg) translateY(0)}}
-.hero-code{
-  background:#111111;
-  border:1px solid rgba(233,165,222,.2);
-  border-radius:12px;
-  padding:24px 26px;
+/* TERMINAL */
+.hero-terminal{
   font-family:'Courier New',Courier,monospace;
-  font-size:12px;line-height:1.9;
-  transform:rotate(2deg);
-  box-shadow:0 8px 40px rgba(0,0,0,.5),0 0 0 1px rgba(233,165,222,.06);
-  position:relative;
-  animation:codeBlockFade .7s ease .8s both;
-  white-space:pre-wrap;
-  word-break:break-word;
-  overflow:hidden;
+  font-size:15px;line-height:2em;
+  display:flex;flex-direction:column;gap:0;
   min-width:0;
 }
-.hero-code .corner{
-  position:absolute;width:10px;height:10px;
-  border-color:var(--pink);border-style:solid;
+.term-line{
+  display:flex;align-items:baseline;gap:10px;
+  white-space:nowrap;overflow:hidden;
 }
-.hero-code .corner.tl{top:8px;left:8px;border-width:2px 0 0 2px}
-.hero-code .corner.tr{top:8px;right:8px;border-width:2px 2px 0 0}
-.hero-code .corner.bl{bottom:8px;left:8px;border-width:0 0 2px 2px}
-.hero-code .corner.br{bottom:8px;right:8px;border-width:0 2px 2px 0}
-.code-key{color:var(--pink)}
-.code-val{color:#ffffff}
-.code-str{color:#c3f0b2}
-.code-arr{color:#ffffff}
-.code-dim{color:#666666}
+.term-prompt{color:var(--pink);flex-shrink:0;user-select:none}
+.term-text{color:#ffffff}
+.term-cursor{
+  display:inline-block;width:9px;height:1em;
+  background:var(--pink);vertical-align:text-bottom;
+  animation:blink .75s step-end infinite;
+  margin-left:2px;
+}
 
 @media(max-width:900px){
-  .hero-grid{grid-template-columns:1fr;gap:40px}
-  .hero-code{transform:rotate(0deg);animation:badgeFade .7s ease .8s both}
-}
-@media(max-width:640px){
-  .hero-code{font-size:.75rem;padding:20px 22px}
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .hero-terminal{font-size:13px}
+  .term-line{white-space:normal;word-break:break-word}
 }
 </style>
 </head>
@@ -512,18 +498,7 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
         <a class="btn btn-outline" href="#hire">Work With Me</a>
       </div>
     </div>
-    <div class="hero-code">
-      <span class="corner tl"></span>
-      <span class="corner tr"></span>
-      <span class="corner bl"></span>
-      <span class="corner br"></span><span class="code-val">praise_james</span> <span class="code-dim">=</span> <span class="code-dim">{</span>
-    <span class="code-key">"role"</span><span class="code-dim">:</span>      <span class="code-dim">[</span><span class="code-str">"AI/ML Technical Writer"</span><span class="code-dim">,</span> <span class="code-str">"Developer Advocate"</span><span class="code-dim">],</span>
-    <span class="code-key">"clients"</span><span class="code-dim">:</span>   <span class="code-dim">[</span><span class="code-str">"ZenRows"</span><span class="code-dim">,</span> <span class="code-str">"Actian"</span><span class="code-dim">],</span>
-    <span class="code-key">"reach"</span><span class="code-dim">:</span>     <span class="code-str">"300k+ impressions on LinkedIn and X in 3 months"</span><span class="code-dim">,</span>
-    <span class="code-key">"community"</span><span class="code-dim">:</span> <span class="code-str">"500 Mamba Brief readers, month one"</span><span class="code-dim">,</span>
-    <span class="code-key">"output"</span><span class="code-dim">:</span>    <span class="code-str">"content developers bookmark"</span>
-<span class="code-dim">}</span>
-    </div>
+    <div class="hero-terminal" id="heroTerminal"></div>
   </div>
 </section>
 
@@ -784,6 +759,58 @@ function type() {
   setTimeout(type, deleting ? 40 : 70);
 }
 type();
+
+// TERMINAL
+const termLines = [
+  "writing for ZenRows and Actian",
+  "300k+ developer eyeballs on client content",
+  "shipping technical content for devtool companies",
+];
+const termEl = document.getElementById('heroTerminal');
+let tli = 0, tci = 0;
+
+function buildLine(index) {
+  const row = document.createElement('div');
+  row.className = 'term-line';
+  const prompt = document.createElement('span');
+  prompt.className = 'term-prompt';
+  prompt.textContent = '>';
+  const text = document.createElement('span');
+  text.className = 'term-text';
+  row.appendChild(prompt);
+  row.appendChild(text);
+  termEl.appendChild(row);
+  return text;
+}
+
+function typeTerminal() {
+  if (tli >= termLines.length) return;
+  if (tci === 0) {
+    const textEl = buildLine(tli);
+    termEl._currentText = textEl;
+    // remove cursor from previous line if any
+    const prev = termEl.querySelector('.term-cursor');
+    if (prev) prev.remove();
+  }
+  const textEl = termEl._currentText;
+  textEl.textContent = termLines[tli].slice(0, tci + 1);
+  tci++;
+  if (tci < termLines[tli].length) {
+    setTimeout(typeTerminal, 45);
+  } else {
+    tli++;
+    tci = 0;
+    if (tli < termLines.length) {
+      setTimeout(typeTerminal, 280);
+    } else {
+      // add blinking cursor after last line
+      const cursor = document.createElement('span');
+      cursor.className = 'term-cursor';
+      textEl.appendChild(cursor);
+    }
+  }
+}
+setTimeout(typeTerminal, 900);
 
 // SWIPE DOTS
 function setupDots(trackId, dotsId) {
