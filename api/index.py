@@ -514,13 +514,12 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
       <span class="corner tl"></span>
       <span class="corner tr"></span>
       <span class="corner bl"></span>
-      <span class="corner br"></span><span class="code-dim">const</span> <span class="code-val">praiseJames</span> <span class="code-dim">=</span> <span class="code-dim">{</span>
-  <span class="code-key">role</span><span class="code-dim">:</span>        <span class="code-str">"AI/ML Technical Writer"</span><span class="code-dim">,</span>
-  <span class="code-key">superpower</span><span class="code-dim">:</span>  <span class="code-str">"storytelling"</span><span class="code-dim">,</span>
-  <span class="code-key">clients</span><span class="code-dim">:</span>     <span class="code-dim">[</span><span class="code-str">"ZenRows"</span><span class="code-dim">,</span> <span class="code-str">"Actian"</span><span class="code-dim">,</span> <span class="code-str">"Bright Data"</span><span class="code-dim">],</span>
-  <span class="code-key">reach</span><span class="code-dim">:</span>       <span class="code-str">"400k+ impressions"</span><span class="code-dim">,</span>
-  <span class="code-key">community</span><span class="code-dim">:</span>   <span class="code-str">"500 Mamba Brief subscribers"</span><span class="code-dim">,</span>
-  <span class="code-key">output</span><span class="code-dim">:</span>      <span class="code-str">"content that ships"</span>
+      <span class="corner br"></span><span class="code-val">praise_james</span> <span class="code-dim">=</span> <span class="code-dim">{</span>
+    <span class="code-key">"role"</span><span class="code-dim">:</span>      <span class="code-dim">[</span><span class="code-str">"AI/ML Technical Writer"</span><span class="code-dim">,</span> <span class="code-str">"Developer Advocate"</span><span class="code-dim">],</span>
+    <span class="code-key">"clients"</span><span class="code-dim">:</span>   <span class="code-dim">[</span><span class="code-str">"ZenRows"</span><span class="code-dim">,</span> <span class="code-str">"Actian"</span><span class="code-dim">],</span>
+    <span class="code-key">"reach"</span><span class="code-dim">:</span>     <span class="code-str">"300k+ impressions on LinkedIn and X in 3 months"</span><span class="code-dim">,</span>
+    <span class="code-key">"community"</span><span class="code-dim">:</span> <span class="code-str">"500 Mamba Brief readers, month one"</span><span class="code-dim">,</span>
+    <span class="code-key">"output"</span><span class="code-dim">:</span>    <span class="code-str">"content developers bookmark"</span>
 <span class="code-dim">}</span>
     </div>
   </div>
