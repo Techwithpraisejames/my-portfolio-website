@@ -424,6 +424,51 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
 
 /* DIVIDER */
 .divider{height:1px;background:rgba(233,165,222,.08);max-width:1150px;margin:0 auto}
+
+/* HERO GRID */
+.hero-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:48px;align-items:center;width:100%;
+}
+.hero-left{display:flex;flex-direction:column;align-items:flex-start}
+
+/* CODE BLOCK */
+@keyframes codeBlockFade{from{opacity:0;transform:rotate(2deg) translateY(16px)}to{opacity:1;transform:rotate(2deg) translateY(0)}}
+.hero-code{
+  background:#111111;
+  border:1px solid rgba(233,165,222,.2);
+  border-radius:12px;
+  padding:28px 30px;
+  font-family:'Courier New',Courier,monospace;
+  font-size:.82rem;line-height:1.85;
+  transform:rotate(2deg);
+  box-shadow:0 8px 40px rgba(0,0,0,.5),0 0 0 1px rgba(233,165,222,.06);
+  position:relative;
+  animation:codeBlockFade .7s ease .8s both;
+  white-space:pre;
+  overflow:hidden;
+}
+.hero-code .corner{
+  position:absolute;width:10px;height:10px;
+  border-color:var(--pink);border-style:solid;
+}
+.hero-code .corner.tl{top:8px;left:8px;border-width:2px 0 0 2px}
+.hero-code .corner.tr{top:8px;right:8px;border-width:2px 2px 0 0}
+.hero-code .corner.bl{bottom:8px;left:8px;border-width:0 0 2px 2px}
+.hero-code .corner.br{bottom:8px;right:8px;border-width:0 2px 2px 0}
+.code-key{color:var(--pink)}
+.code-val{color:#ffffff}
+.code-str{color:#c3f0b2}
+.code-arr{color:#ffffff}
+.code-dim{color:#666666}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero-code{transform:rotate(0deg);animation:badgeFade .7s ease .8s both}
+}
+@media(max-width:640px){
+  .hero-code{font-size:.75rem;padding:20px 22px}
+}
 </style>
 </head>
 <body>
@@ -443,24 +488,41 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
 
 <!-- HERO -->
 <section id="hero" style="max-width:1200px;margin:0 auto;padding-left:max(24px,calc((100vw - 1200px)/2));padding-right:max(24px,calc((100vw - 1200px)/2))">
-  <div class="hero-tag">
-    <span class="corner tl"></span>
-    <span class="corner tr"></span>
-    <span class="corner bl"></span>
-    <span class="corner br"></span>
-    AI/ML Technical Writer and Developer Advocate
-  </div>
-  <h1 class="hero-headline">
-    <span class="static">I write technical content</span>
-    <span class="typewriter-wrap"><span id="typewriter"></span></span>
-  </h1>
-  <p class="hero-sub">
-    I close the loop from <strong>article</strong> to <strong>impression</strong> to <strong>community</strong>.<br>
-    AI/ML technical writing and developer relations for companies building the next wave of developer tools.
-  </p>
-  <div class="hero-actions">
-    <a class="btn btn-primary" href="#articles">Read My Work</a>
-    <a class="btn btn-outline" href="#hire">Work With Me</a>
+  <div class="hero-grid">
+    <div class="hero-left">
+      <div class="hero-tag">
+        <span class="corner tl"></span>
+        <span class="corner tr"></span>
+        <span class="corner bl"></span>
+        <span class="corner br"></span>
+        AI/ML Technical Writer and Developer Advocate
+      </div>
+      <h1 class="hero-headline">
+        <span class="static">I write technical content</span>
+        <span class="typewriter-wrap"><span id="typewriter"></span></span>
+      </h1>
+      <p class="hero-sub">
+        I close the loop from <strong>article</strong> to <strong>impression</strong> to <strong>community</strong>.<br>
+        AI/ML technical writing and developer relations for companies building the next wave of developer tools.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#articles">Read My Work</a>
+        <a class="btn btn-outline" href="#hire">Work With Me</a>
+      </div>
+    </div>
+    <div class="hero-code">
+      <span class="corner tl"></span>
+      <span class="corner tr"></span>
+      <span class="corner bl"></span>
+      <span class="corner br"></span><span class="code-dim">const</span> <span class="code-val">praiseJames</span> <span class="code-dim">=</span> <span class="code-dim">{</span>
+  <span class="code-key">role</span><span class="code-dim">:</span>        <span class="code-str">"AI/ML Technical Writer"</span><span class="code-dim">,</span>
+  <span class="code-key">superpower</span><span class="code-dim">:</span>  <span class="code-str">"storytelling"</span><span class="code-dim">,</span>
+  <span class="code-key">clients</span><span class="code-dim">:</span>     <span class="code-dim">[</span><span class="code-str">"ZenRows"</span><span class="code-dim">,</span> <span class="code-str">"Actian"</span><span class="code-dim">,</span> <span class="code-str">"Bright Data"</span><span class="code-dim">],</span>
+  <span class="code-key">reach</span><span class="code-dim">:</span>       <span class="code-str">"400k+ impressions"</span><span class="code-dim">,</span>
+  <span class="code-key">community</span><span class="code-dim">:</span>   <span class="code-str">"500 Mamba Brief subscribers"</span><span class="code-dim">,</span>
+  <span class="code-key">output</span><span class="code-dim">:</span>      <span class="code-str">"content that ships"</span>
+<span class="code-dim">}</span>
+    </div>
   </div>
 </section>
 
