@@ -437,7 +437,7 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
   font-family:'Courier New',Courier,monospace;
   font-size:15px;line-height:2em;
   display:flex;flex-direction:column;gap:0;
-  min-width:0;
+  min-width:0;align-self:center;
 }
 .term-line{
   display:flex;align-items:baseline;gap:10px;
@@ -490,8 +490,7 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
         <span class="typewriter-wrap"><span id="typewriter"></span></span>
       </h1>
       <p class="hero-sub">
-        I close the loop from <strong>article</strong> to <strong>impression</strong> to <strong>community</strong>.<br>
-        AI/ML technical writing and developer relations for companies building the next wave of developer tools.
+        I write technical content that makes developers understand not just what a product does, but why it matters. Then I make sure they find it.
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#articles">Read My Work</a>
@@ -578,7 +577,7 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
   </p>
   <div class="devrel-grid">
     <div class="devrel-card">
-      <div class="devrel-num">400K+</div>
+      <div class="devrel-num">300K+</div>
       <div class="devrel-title">LinkedIn and X Impressions</div>
       <div class="devrel-desc">Drove developer reach across LinkedIn and X in 3 months, distributing client content to targeted developer audiences.</div>
     </div>
@@ -631,7 +630,7 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
     <div class="about-text">
       <p>I work with <strong>AI companies</strong> to create product-led content that engineers understand and use: technical tutorials, DevTool explainers, thought leadership, and benchmark-driven research.</p>
       <p>My background in mathematics and hands-on experience in machine learning means I understand AI at its core. But what sets me apart is <strong>storytelling</strong>. I don't simplify content by stripping out depth. I build narrative arcs around complex concepts so readers follow a clear thread from problem to solution and understand not just what a product does, but why it matters and how it fits their workflow.</p>
-      <p>I also own distribution. In 3 months, I drove <strong>400,000 impressions</strong> across LinkedIn and X, putting client articles directly in front of developer audiences. I launched The Mamba Brief, a roundup of weekly developer reads, which grew to <strong>500 subscribers</strong> in its first month.</p>
+      <p>I also own distribution. In 3 months, I drove <strong>300,000 impressions</strong> across LinkedIn and X, putting client articles directly in front of developer audiences. I launched The Mamba Brief, a roundup of weekly developer reads, which grew to <strong>500 subscribers</strong> in its first month.</p>
       <p>The result is content that positions your product as the long-term solution in your space, and reaches the developers who need to see it. <strong style="color:var(--pink)">If you're building AI tools and need a writer who gets both the tech and the narrative, you're in the right place.</strong></p>
     </div>
     <div class="about-pills">
