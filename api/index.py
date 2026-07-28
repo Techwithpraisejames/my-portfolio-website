@@ -211,9 +211,9 @@ h3{font-family:'Gamja Flower',cursive;font-size:1.5rem;font-weight:400;margin-bo
 
 .hero-headline{
   font-family:'Gamja Flower',cursive;
-  font-size:clamp(2.6rem,7vw,5.2rem);
-  font-weight:400;line-height:1.1;
-  margin-bottom:18px;max-width:820px;
+  font-size:clamp(2.4rem,4.5vw,3.8rem);
+  font-weight:400;line-height:1.15;
+  margin-bottom:18px;
 }
 .hero-headline .static{display:block;color:var(--text)}
 .hero-headline .typewriter-wrap{
@@ -427,7 +427,7 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
 
 /* HERO GRID */
 .hero-grid{
-  display:grid;grid-template-columns:1fr 1fr;
+  display:grid;grid-template-columns:1.1fr 0.9fr;
   gap:48px;align-items:center;width:100%;
 }
 .hero-left{display:flex;flex-direction:column;align-items:flex-start}
@@ -438,15 +438,17 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
   background:#111111;
   border:1px solid rgba(233,165,222,.2);
   border-radius:12px;
-  padding:28px 30px;
+  padding:24px 26px;
   font-family:'Courier New',Courier,monospace;
-  font-size:.82rem;line-height:1.85;
+  font-size:12px;line-height:1.9;
   transform:rotate(2deg);
   box-shadow:0 8px 40px rgba(0,0,0,.5),0 0 0 1px rgba(233,165,222,.06);
   position:relative;
   animation:codeBlockFade .7s ease .8s both;
-  white-space:pre;
+  white-space:pre-wrap;
+  word-break:break-word;
   overflow:hidden;
+  min-width:0;
 }
 .hero-code .corner{
   position:absolute;width:10px;height:10px;
