@@ -448,7 +448,7 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
     <span class="corner tr"></span>
     <span class="corner bl"></span>
     <span class="corner br"></span>
-    AI/ML Technical Writer and Developer Relations
+    AI/ML Technical Writer and Developer Advocate
   </div>
   <h1 class="hero-headline">
     <span class="static">I write technical content</span>
