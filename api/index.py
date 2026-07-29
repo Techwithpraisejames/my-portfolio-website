@@ -461,11 +461,11 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
   font-family:'Courier New',Courier,monospace;
   font-size:15px;line-height:2em;
   display:flex;flex-direction:column;gap:0;
-  min-width:0;align-self:center;
+  min-width:0;align-self:center;overflow:visible;
 }
 .term-line{
   display:flex;align-items:baseline;gap:10px;
-  white-space:nowrap;overflow:hidden;
+  white-space:nowrap;
 }
 .term-prompt{color:var(--pink);flex-shrink:0;user-select:none}
 .term-text{color:#ffffff}
@@ -476,6 +476,9 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
   margin-left:2px;
 }
 
+@media(min-width:901px){
+  .hero-terminal{min-width:540px}
+}
 @media(max-width:900px){
   .hero-grid{grid-template-columns:1fr;gap:32px}
   .hero-terminal{font-size:13px}
