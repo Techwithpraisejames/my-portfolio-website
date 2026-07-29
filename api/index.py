@@ -158,6 +158,24 @@ body{font-family:'Raleway',sans-serif;background:var(--bg);color:var(--text);ove
 section{padding:72px 24px 64px;max-width:1200px;margin:0 auto}
 section.full-width{max-width:none;padding-left:0;padding-right:0}
 
+/* SECTION DIVIDER */
+.section-divider{
+  position:relative;width:100%;margin:16px 0;
+  display:flex;align-items:center;justify-content:center;
+}
+.section-divider::before{
+  content:'';position:absolute;left:0;right:0;top:50%;
+  height:1px;background:#E9A5DE;
+}
+.section-divider::after{
+  content:'/* next section */';
+  position:relative;z-index:1;
+  background:#000000;padding:0 14px;
+  font-family:'Courier New',Courier,monospace;
+  font-size:11px;color:#E9A5DE;letter-spacing:.1em;
+  white-space:nowrap;
+}
+
 /* SECTION LABEL */
 .label{
   font-family:'Gamja Flower',cursive;
@@ -525,6 +543,8 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
   </div>
 </div>
 
+<div class="section-divider"></div>
+
 <!-- ARTICLES -->
 <div class="track-section" id="articles">
   <div class="track-header">
@@ -547,6 +567,8 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
     <a class="btn btn-outline" href="https://medium.com/@techwithpraisejames" target="_blank" rel="noopener">Read more on Medium &nearr;</a>
   </div>
 </div>
+
+<div class="section-divider"></div>
 
 <!-- DEVREL -->
 <section id="devrel">
@@ -589,6 +611,8 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
   </div>
 </section>
 
+<div class="section-divider"></div>
+
 <!-- FEATURED PROJECT -->
 <section id="project" class="full-width">
   <div class="project-inner">
@@ -618,6 +642,8 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
   </div>
 </section>
 
+<div class="section-divider"></div>
+
 <!-- VIDEOS -->
 <div class="track-section" id="videos">
   <div class="track-header">
@@ -640,6 +666,8 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
     <a class="btn btn-outline" href="https://www.youtube.com/channel/UCwVDq2mG2FuNCRzAf-ypLvg" target="_blank" rel="noopener">See all videos &nearr;</a>
   </div>
 </div>
+
+<div class="section-divider"></div>
 
 <!-- ABOUT -->
 <section id="about">
@@ -673,6 +701,8 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
   </div>
 </section>
 
+<div class="section-divider"></div>
+
 <!-- TESTIMONIALS -->
 <div class="track-section" id="testimonials" style="background:var(--surface);padding-top:80px;padding-bottom:80px">
   <div class="track-header">
@@ -694,6 +724,8 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
   <div class="dots" id="testimonialDots"></div>
 </div>
 
+<div class="section-divider"></div>
+
 <!-- CONNECT -->
 <section id="connect">
   <span class="label">Stay Connected</span>
@@ -708,6 +740,8 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
     {% endfor %}
   </div>
 </section>
+
+<div class="section-divider"></div>
 
 <!-- NEWSLETTER -->
 <section id="newsletter" style="background:var(--surface);padding:80px 24px;max-width:none">
@@ -731,6 +765,8 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
   </div>
 </section>
 
+<div class="section-divider"></div>
+
 <!-- HIRE -->
 <section id="hire" class="full-width" style="padding:80px 24px">
   <div class="hire-inner">
@@ -740,6 +776,8 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
     <a class="btn btn-primary" href="mailto:techwithpraisejames@gmail.com">Get in Touch &rarr;</a>
   </div>
 </section>
+
+<div class="section-divider"></div>
 
 <!-- FOOTER -->
 <footer>
