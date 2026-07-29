@@ -780,7 +780,7 @@ type();
 
 // TERMINAL
 const termLines = [
-  "writing for ZenRows and Actian",
+  "writing developer-focused content for ZenRows and Actian",
   "300k+ developer eyeballs on client content",
   "shipping technical content for devtool companies",
 ];
