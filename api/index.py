@@ -320,6 +320,12 @@ h3{font-family:'Gamja Flower',cursive;font-size:1.5rem;font-weight:400;margin-bo
 .devrel-num{font-family:'Gamja Flower',cursive;font-size:2rem;color:var(--pink);line-height:1;margin-bottom:12px}
 .devrel-title{font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--text)}
 .devrel-desc{font-size:.88rem;color:var(--text2);line-height:1.65;font-weight:300}
+.li-proof{background:rgba(255,255,255,.05);border:1px solid rgba(233,165,222,.15);border-radius:10px;padding:16px;margin-top:18px}
+.li-proof-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text2);margin-bottom:10px}
+.li-proof-post{font-size:.8rem;color:var(--text2);font-style:italic;border-left:2px solid var(--pink);padding-left:10px;margin-bottom:14px;line-height:1.55}
+.li-proof-stats{display:flex;flex-wrap:wrap;gap:12px 18px}
+.li-proof-num{font-family:'Gamja Flower',cursive;font-size:1.15rem;color:var(--pink);line-height:1;margin-bottom:2px}
+.li-proof-statlabel{font-size:.7rem;color:var(--text2)}
 
 /* VIDEO CARD */
 .vid-card{
@@ -490,7 +496,7 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
         <span class="typewriter-wrap"><span id="typewriter"></span></span>
       </h1>
       <p class="hero-sub">
-        I write technical content that makes developers understand not just what a product does, but why it matters. Then I make sure they find it.
+        I make AI products make sense to the developers who build with them. Then I make sure they find it.
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#articles">Read My Work</a>
@@ -542,32 +548,6 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
   </div>
 </div>
 
-<!-- FEATURED PROJECT -->
-<section id="project" class="full-width">
-  <div class="project-inner">
-    <div>
-      <span class="label">Featured Project</span>
-      <h2>What Senior Technical Writers Know About Cross-Functional Impact</h2>
-      <p style="color:var(--text2);font-size:1rem;line-height:1.8;font-weight:300;margin-top:16px">
-        A community research project. I interviewed 9 senior technical writers at Google, Mastercard, Novu, and other companies to surface what the industry rarely talks about: how technical communicators drive business impact beyond documentation.
-      </p>
-      <p style="color:var(--text2);font-size:1rem;line-height:1.8;font-weight:300;margin-top:12px">
-        The resource sparked conversation among senior practitioners on LinkedIn and reshaped how they think about the role of technical writing inside product organizations.
-      </p>
-    </div>
-    <div class="project-quotes">
-      <div class="proj-quote">
-        <p>"It should be required reading for anyone who still thinks technical writing is just a finishing step. The value is invisible by design and this makes it visible."</p>
-        <cite>Adrian, Senior Technical Writer</cite>
-      </div>
-      <div class="proj-quote">
-        <p>"This made the invisible value of technical writers visible."</p>
-        <cite>Kelley Bennett, Senior Technical Writer</cite>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- DEVREL -->
 <section id="devrel">
   <span class="label">Developer Relations</span>
@@ -580,6 +560,16 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
       <div class="devrel-num">300K+</div>
       <div class="devrel-title">LinkedIn and X Impressions</div>
       <div class="devrel-desc">Drove developer reach across LinkedIn and X in 3 months, distributing client content to targeted developer audiences.</div>
+      <div class="li-proof">
+        <div class="li-proof-label">Single post performance on LinkedIn</div>
+        <div class="li-proof-post">"Every AI code editor in 2026 claims to be revolutionary. Most are just autocomplete with better branding."</div>
+        <div class="li-proof-stats">
+          <div><div class="li-proof-num">62,356</div><div class="li-proof-statlabel">Impressions</div></div>
+          <div><div class="li-proof-num">46,286</div><div class="li-proof-statlabel">Members reached</div></div>
+          <div><div class="li-proof-num">155</div><div class="li-proof-statlabel">Reactions</div></div>
+          <div><div class="li-proof-num">31</div><div class="li-proof-statlabel">Saves</div></div>
+        </div>
+      </div>
     </div>
     <div class="devrel-card">
       <div class="devrel-num">500</div>
@@ -595,6 +585,35 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
       <div class="devrel-num">&#9679;</div>
       <div class="devrel-title">Off the Docs</div>
       <div class="devrel-desc">Co-hosted a technical writer interview series featuring senior practitioners including John Kunney Jr. at Mastercard and Sarah Dugan at Gitbook.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PROJECT -->
+<section id="project" class="full-width">
+  <div class="project-inner">
+    <div>
+      <span class="label">Featured Project</span>
+      <h2>What Senior Technical Writers Know About Cross-Functional Impact</h2>
+      <p style="color:var(--text2);font-size:1rem;line-height:1.8;font-weight:300;margin-top:16px">
+        A community research project. I interviewed 9 senior technical writers at Google, Mastercard, Novu, and other companies to surface what the industry rarely talks about: how technical communicators drive business impact beyond documentation.
+      </p>
+      <p style="color:var(--text2);font-size:1rem;line-height:1.8;font-weight:300;margin-top:12px">
+        The resource sparked conversation among senior practitioners on LinkedIn and reshaped how they think about the role of technical writing inside product organizations.
+      </p>
+      <div style="margin-top:24px">
+        <a class="btn btn-outline" href="https://drive.usercontent.google.com/u/2/uc?id=1186xYxB2RtNuwsPwWPBzavyCLjBQ79tI&export=download" target="_blank" rel="noopener" style="color:#fff">Read the Resource &nearr;</a>
+      </div>
+    </div>
+    <div class="project-quotes">
+      <div class="proj-quote">
+        <p>"It should be required reading for anyone who still thinks technical writing is just a finishing step. The value is invisible by design and this makes it visible."</p>
+        <cite>Adrian, Senior Technical Writer</cite>
+      </div>
+      <div class="proj-quote">
+        <p>"This made the invisible value of technical writers visible."</p>
+        <cite>Kelley Bennett, Senior Technical Writer</cite>
+      </div>
     </div>
   </div>
 </section>
