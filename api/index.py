@@ -194,6 +194,9 @@ h3{font-family:'Gamja Flower',cursive;font-size:1.5rem;font-weight:400;margin-bo
   justify-content:center;align-items:flex-start;
   padding-top:80px;padding-bottom:48px;
   position:relative;overflow:hidden;
+  max-width:1200px;margin:0 auto;
+  padding-left:max(24px,calc((100vw - 1200px)/2));
+  padding-right:max(24px,calc((100vw - 1200px)/2));
 }
 #hero::before{
   content:'';position:absolute;top:-20%;right:-10%;
@@ -247,6 +250,10 @@ h3{font-family:'Gamja Flower',cursive;font-size:1.5rem;font-weight:400;margin-bo
 }
 .hero-sub strong{color:var(--text);font-weight:600}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+
+@media(min-width:481px){
+  .hero-actions{flex-direction:row;flex-wrap:nowrap}
+}
 
 @media(max-width:640px){
   #hero{padding-top:72px;padding-bottom:36px}
@@ -484,6 +491,18 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
   .hero-terminal{font-size:13px}
   .term-line{white-space:normal;word-break:break-word}
 }
+
+/* HERO — LARGE SCREENS */
+@media(min-width:1440px){
+  #hero{
+    max-width:1600px;
+    padding-left:max(24px,calc((100vw - 1600px)/2));
+    padding-right:max(24px,calc((100vw - 1600px)/2));
+  }
+  .hero-grid{grid-template-columns:55% 45%;gap:64px}
+  .hero-left{max-width:none}
+  .hero-headline{font-size:clamp(3.8rem,4.5vw,5.6rem)}
+}
 </style>
 </head>
 <body>
@@ -502,7 +521,7 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
 </nav>
 
 <!-- HERO -->
-<section id="hero" style="max-width:1200px;margin:0 auto;padding-left:max(24px,calc((100vw - 1200px)/2));padding-right:max(24px,calc((100vw - 1200px)/2))">
+<section id="hero">
   <div class="hero-grid">
     <div class="hero-left">
       <div class="hero-tag">
