@@ -116,6 +116,10 @@ HTML_TEMPLATE = r"""
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Praise James — AI/ML Technical Writer and Developer Advocate</title>
+<meta name="description" content="Praise James is an AI/ML technical writer and developer advocate who writes technical content developers trust and builds the distribution that reaches them. Writing for ZenRows, Actian, and more." />
+<meta property="og:title" content="Praise James — AI/ML Technical Writer and Developer Advocate" />
+<meta property="og:description" content="I write technical content that makes AI products make sense to the developers who build with them. Then I make sure they find it." />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHJ4PSI3IiBmaWxsPSIjRTlBNURFIi8+PHRleHQgeD0iMTYiIHk9IjIzIiBmb250LWZhbWlseT0iR2FtamEgRmxvd2VyLGN1cnNpdmUsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMCIgZm9udC13ZWlnaHQ9IjQwMCIgZmlsbD0iI2ZmZmZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UDwvdGV4dD48L3N2Zz4=" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
@@ -437,6 +441,13 @@ h3{font-family:'Gamja Flower',cursive;font-size:1.5rem;font-weight:400;margin-bo
 .hire-inner{max-width:680px;margin:0 auto}
 .hire-inner h2{margin-bottom:20px}
 .hire-inner p{color:var(--text2);font-size:1rem;line-height:1.8;font-weight:300;margin-bottom:32px}
+.hire-inner p.hire-intro{margin-bottom:16px}
+.hire-services{
+  display:inline-flex;flex-direction:column;align-items:flex-start;
+  gap:10px;margin:0 auto 32px;text-align:left;
+}
+.hire-service{font-family:'Raleway',sans-serif;color:var(--text);font-size:1rem;font-weight:400;line-height:1.6}
+.hire-arrow{color:var(--pink);margin-right:10px;font-weight:700}
 
 /* FOOTER */
 footer{padding:40px 24px;text-align:center;border-top:1px solid rgba(255,255,255,.05)}
@@ -704,20 +715,20 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
     </div>
     <div class="about-pills">
       <div class="about-pill">
-        <h4>Technical Writing</h4>
-        <p>Benchmark articles, agentic AI tutorials, architecture guides, and thought leadership for developer tool companies.</p>
+        <h4>Benchmark and Tutorial Content</h4>
+        <p>Original research, performance comparisons, and step-by-step developer guides that give engineers something they can actually use.</p>
       </div>
       <div class="about-pill">
-        <h4>Developer Relations</h4>
-        <p>Content distribution, community management, and audience building that puts your product in front of the right developers.</p>
+        <h4>Content Distribution and Developer Reach</h4>
+        <p>Getting content in front of the right developers across LinkedIn and X. I track what lands and double down on what works.</p>
       </div>
       <div class="about-pill">
-        <h4>Domain Expertise</h4>
-        <p>Mathematics background with hands-on machine learning experience. I understand AI at its core, not just at the surface.</p>
+        <h4>AI and ML Depth</h4>
+        <p>Mathematics background and hands-on machine learning experience. I understand the technology at its core.</p>
       </div>
       <div class="about-pill">
-        <h4>Video and Education</h4>
-        <p>YouTube channel breaking down AI and ML concepts for developers who want to understand the technology they're building with.</p>
+        <h4>Developer Education and Video</h4>
+        <p>Breaking down AI and ML concepts on YouTube for developers who want to understand the technology behind the tools they build with.</p>
       </div>
     </div>
   </div>
@@ -795,7 +806,14 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
   <div class="hire-inner">
     <span class="label center">Work With Me</span>
     <h2>Let's build something developers will actually read</h2>
-    <p>If you're building AI tools and need a writer who gets both the tech and the narrative and can get it in front of the right developers, let's talk.</p>
+    <p class="hire-intro">Here is what I can help you with:</p>
+    <div class="hire-services">
+      <div class="hire-service"><span class="hire-arrow">&rarr;</span>Benchmark articles and original research</div>
+      <div class="hire-service"><span class="hire-arrow">&rarr;</span>AI product integration tutorials</div>
+      <div class="hire-service"><span class="hire-arrow">&rarr;</span>Thought leadership and opinion pieces for developer audiences</div>
+      <div class="hire-service"><span class="hire-arrow">&rarr;</span>GEO and AEO content strategy</div>
+      <div class="hire-service"><span class="hire-arrow">&rarr;</span>Content distribution across LinkedIn and X</div>
+    </div>
     <a class="btn btn-primary" href="mailto:techwithpraisejames@gmail.com">Get in Touch &rarr;</a>
   </div>
 </section>
