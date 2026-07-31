@@ -90,6 +90,7 @@ SOCIALS = [
     {"name": "LinkedIn", "url": "https://www.linkedin.com/in/praise-james-608b91284", "icon": "in", "color": "#0A66C2"},
     {"name": "GitHub", "url": "https://github.com/Techwithpraisejames", "icon": "GH", "color": "#ffffff"},
     {"name": "Medium", "url": "https://medium.com/@techwithpraisejames", "icon": "M", "color": "#ffffff"},
+    {"name": "X", "url": "https://x.com/causingheadache", "icon": "X", "handle": "@causingheadache", "color": "#ffffff"},
 ]
 
 NEWSLETTERS = [
@@ -104,7 +105,7 @@ TESTIMONIALS = [
     {"quote": "You are amazing and so responsible! I will for sure ask for more of your services for some other prototypes and events marketing.", "name": "Ornella", "title": "Founder and CEO", "company": "MindyMinds"},
     {"quote": "Whenever I get a task of reviewing your document, it becomes one of my favourite activities. Amazing work as always.", "name": "Asjad", "title": "Developer Advocate", "company": "Hackmamba"},
     {"quote": "This is a strong piece. Love how technically-grounded and exhaustive it is.", "name": "Henry", "title": "Head of Content", "company": "Hackmamba"},
-    {"quote": "It should be required reading for anyone who still thinks technical writing is just a finishing step. The value is invisible by design and this makes it visible.", "name": "Adrian", "title": "Senior Technical Writer", "company": ""},
+    {"quote": "It should be required reading for anyone who still thinks technical writing is just a finishing step. The value is invisible by design and this makes it visible.", "name": "Adrian Ashley", "title": "Senior Technical Writer", "company": ""},
     {"quote": "Your content is the benchmark for others on the team.", "name": "Blessing", "title": "Head of Operations", "company": "Hackmamba"},
 ]
 
@@ -114,7 +115,7 @@ HTML_TEMPLATE = r"""
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Praise James — AI/ML Technical Writer and Developer Relations</title>
+<title>Praise James — AI/ML Technical Writer and Developer Advocate</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
@@ -409,6 +410,7 @@ h3{font-family:'Gamja Flower',cursive;font-size:1.5rem;font-weight:400;margin-bo
 .connect-card:hover{border-color:var(--pink);transform:translateY(-3px)}
 .connect-icon{font-family:'Gamja Flower',cursive;font-size:1.8rem;color:var(--card-color)}
 .connect-name{font-size:1rem;font-weight:700}
+.connect-handle{font-size:.8rem;color:var(--text2)}
 .connect-arrow{font-size:.85rem;color:var(--pink);margin-top:auto}
 
 /* NEWSLETTER */
@@ -551,7 +553,7 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
 <div class="metrics-bar" id="metrics">
   <div class="metrics-inner">
     <div class="metric">
-      <span class="metric-num">760K+</span>
+      <span class="metric-num">340K+</span>
       <span class="metric-label">organic visits across 50+ articles</span>
     </div>
     <div class="metric">
@@ -621,12 +623,10 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
       <div class="devrel-desc">Launched a weekly developer content roundup. Grew to 500 subscribers in its first month.</div>
     </div>
     <div class="devrel-card">
-      <div class="devrel-num">&#9679;</div>
       <div class="devrel-title">Hackmamba Creators Community</div>
       <div class="devrel-desc">Discord and community management for Hackmamba's developer author ecosystem.</div>
     </div>
     <div class="devrel-card">
-      <div class="devrel-num">&#9679;</div>
       <div class="devrel-title">Off the Docs</div>
       <div class="devrel-desc">Co-hosted a technical writer interview series featuring senior practitioners including John Kunney Jr. at Mastercard and Sarah Dugan at Gitbook.</div>
     </div>
@@ -654,7 +654,7 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
     <div class="project-quotes">
       <div class="proj-quote">
         <p>"It should be required reading for anyone who still thinks technical writing is just a finishing step. The value is invisible by design and this makes it visible."</p>
-        <cite>Adrian, Senior Technical Writer</cite>
+        <cite>Adrian Ashley, Senior Technical Writer</cite>
       </div>
       <div class="proj-quote">
         <p>"This made the invisible value of technical writers visible."</p>
@@ -698,7 +698,7 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
   <div class="about-grid">
     <div class="about-text">
       <p>I work with <strong>AI companies</strong> to create product-led content that engineers understand and use: technical tutorials, DevTool explainers, thought leadership, and benchmark-driven research.</p>
-      <p>My background in mathematics and hands-on experience in machine learning means I understand AI at its core. But what sets me apart is <strong>storytelling</strong>. I don't simplify content by stripping out depth. I build narrative arcs around complex concepts so readers follow a clear thread from problem to solution and understand not just what a product does, but why it matters and how it fits their workflow.</p>
+      <p>My background in mathematics and hands-on experience in machine learning means I understand AI at its core. But what sets me apart is <strong>storytelling</strong>. I don't simplify content by stripping out depth. I build narrative arcs around complex concepts so readers follow a clear thread from problem to solution and understand what a product does, why it matters, and how it fits their workflow.</p>
       <p>I also own distribution. In 3 months, I drove <strong>300,000 impressions</strong> across LinkedIn and X, putting client articles directly in front of developer audiences. I launched The Mamba Brief, a roundup of weekly developer reads, which grew to <strong>500 subscribers</strong> in its first month.</p>
       <p>The result is content that positions your product as the long-term solution in your space, and reaches the developers who need to see it. <strong style="color:var(--pink)">If you're building AI tools and need a writer who gets both the tech and the narrative, you're in the right place.</strong></p>
     </div>
@@ -757,6 +757,7 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
     <a class="connect-card" href="{{ s.url }}" target="_blank" rel="noopener" style="--card-color:{{ s.color }}">
       <span class="connect-icon" style="color:{{ s.color }}">{{ s.icon }}</span>
       <span class="connect-name">{{ s.name }}</span>
+      {% if s.handle %}<span class="connect-handle">{{ s.handle }}</span>{% endif %}
       <span class="connect-arrow">Visit &rarr;</span>
     </a>
     {% endfor %}
@@ -810,6 +811,7 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
     <a href="https://github.com/Techwithpraisejames" target="_blank">GitHub</a>
     <a href="https://www.linkedin.com/in/praise-james-608b91284" target="_blank">LinkedIn</a>
     <a href="https://medium.com/@techwithpraisejames" target="_blank">Medium</a>
+    <a href="https://x.com/causingheadache" target="_blank">X</a>
   </div>
 </footer>
 
