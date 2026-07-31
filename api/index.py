@@ -168,7 +168,7 @@ section.full-width{max-width:none;padding-left:0;padding-right:0}
   height:1px;background:#E9A5DE;
 }
 .section-divider::after{
-  content:'/* next section */';
+  content:'/* keep reading */';
   position:relative;z-index:1;
   background:#000000;padding:0 14px;
   font-family:'Courier New',Courier,monospace;
