@@ -33,6 +33,13 @@ ARTICLES = [
         "tags": ["vector databases", "data engineering"],
     },
     {
+        "title": "State of Vector Database Q2 2026",
+        "url": "https://medium.com/actian-for-developers/vector-database-news-2026-5d707384be6b",
+        "source": "Actian / Medium",
+        "descriptor": "A roundup of the biggest vector database developments and shifts in 2026",
+        "tags": ["vector databases", "data engineering", "AI"],
+    },
+    {
         "title": "A CTO's 5-Phase Roadmap to AI-Native Internal Tools",
         "url": "https://dev.to/bennykillua/a-ctos-5-phase-roadmap-to-ai-native-internal-tools-and-why-most-pilots-stall-5ea5",
         "source": "DEV.to",
@@ -244,7 +251,7 @@ h3{font-family:'Gamja Flower',cursive;font-size:1.5rem;font-weight:400;margin-bo
 .hero-headline .static{display:block;color:var(--text)}
 .hero-headline .typewriter-wrap{
   display:block;color:var(--pink);
-  min-height:1.2em;
+  min-height:1.2em;overflow:hidden;
 }
 #typewriter{border-right:3px solid var(--pink);padding-right:4px;animation:blink .75s step-end infinite}
 @keyframes blink{0%,100%{border-color:var(--pink)}50%{border-color:transparent}}
@@ -842,6 +849,25 @@ const phrases = [
 ];
 let pi = 0, ci = 0, deleting = false;
 const el = document.getElementById('typewriter');
+const typewriterWrap = document.querySelector('.typewriter-wrap');
+
+function sizeTypewriterWrap() {
+  const savedText = el.textContent;
+  typewriterWrap.style.height = 'auto';
+  let max = 0;
+  phrases.forEach(p => {
+    el.textContent = p;
+    max = Math.max(max, typewriterWrap.scrollHeight);
+  });
+  el.textContent = savedText;
+  typewriterWrap.style.height = max + 'px';
+}
+sizeTypewriterWrap();
+let resizeRaf;
+window.addEventListener('resize', () => {
+  cancelAnimationFrame(resizeRaf);
+  resizeRaf = requestAnimationFrame(sizeTypewriterWrap);
+});
 
 function type() {
   const current = phrases[pi];
