@@ -1,5 +1,7 @@
 from flask import Flask, render_template_string
 import json as _json
+from photo_data import HERO_PHOTO_DATA_URI
+
 
 app = Flask(__name__)
 
@@ -202,20 +204,24 @@ h3{font-family:'Gamja Flower',cursive;font-size:1.5rem;font-weight:400;margin-bo
 
 /* HERO */
 #hero{
-  min-height:100vh;display:flex;flex-direction:column;
-  justify-content:center;align-items:flex-start;
-  padding-top:80px;padding-bottom:48px;
-  position:relative;overflow:hidden;
+  min-height:90vh;
+  display:flex;flex-direction:column;justify-content:center;
+  background:var(--bg);
+  padding-top:80px;padding-bottom:60px;
   max-width:1200px;margin:0 auto;
   padding-left:max(24px,calc((100vw - 1200px)/2));
   padding-right:max(24px,calc((100vw - 1200px)/2));
 }
-#hero::before{
-  content:'';position:absolute;top:-20%;right:-10%;
-  width:60vw;height:60vw;max-width:700px;max-height:700px;
-  background:radial-gradient(circle,rgba(233,165,222,.06) 0%,transparent 70%);
-  pointer-events:none;
+
+/* HERO GRID */
+.hero-grid{
+  display:grid;
+  grid-template-columns:55% 45%;
+  grid-template-areas:"left photo";
+  gap:48px;align-items:center;width:100%;
 }
+.hero-left{grid-area:left;display:flex;flex-direction:column;align-items:flex-start}
+.hero-photo-col{grid-area:photo;display:flex;justify-content:center;align-items:center}
 
 /* HERO BADGE — corner-bracket frame */
 @keyframes badgeFade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
@@ -224,7 +230,7 @@ h3{font-family:'Gamja Flower',cursive;font-size:1.5rem;font-weight:400;margin-bo
   display:inline-block;
   position:relative;
   padding:10px 18px;
-  margin-bottom:20px;
+  margin-bottom:24px;
   font-family:'Raleway',sans-serif;
   font-size:11px;font-weight:600;
   letter-spacing:.15em;text-transform:uppercase;
@@ -244,9 +250,9 @@ h3{font-family:'Gamja Flower',cursive;font-size:1.5rem;font-weight:400;margin-bo
 
 .hero-headline{
   font-family:'Gamja Flower',cursive;
-  font-size:clamp(2.4rem,4.5vw,3.8rem);
+  font-size:clamp(2.8rem,5vw,4.2rem);
   font-weight:400;line-height:1.15;
-  margin-bottom:18px;
+  margin-bottom:20px;
 }
 .hero-headline .static{display:block;color:var(--text)}
 .hero-headline .typewriter-wrap{
@@ -257,20 +263,49 @@ h3{font-family:'Gamja Flower',cursive;font-size:1.5rem;font-weight:400;margin-bo
 @keyframes blink{0%,100%{border-color:var(--pink)}50%{border-color:transparent}}
 
 .hero-sub{
-  font-size:1rem;color:var(--text2);max-width:560px;
-  line-height:1.75;font-weight:300;margin-bottom:28px;
+  font-family:'Raleway',sans-serif;
+  font-size:1.05rem;color:var(--text2);max-width:480px;
+  line-height:1.7;font-weight:300;margin-bottom:32px;
 }
 .hero-sub strong{color:var(--text);font-weight:600}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-actions{display:flex;flex-direction:row;flex-wrap:wrap;gap:16px;margin-bottom:40px}
 
-@media(min-width:481px){
-  .hero-actions{flex-direction:row;flex-wrap:nowrap}
+/* HERO TERMINAL */
+.hero-terminal{
+  font-family:'Courier New',Courier,monospace;
+  font-size:13px;line-height:2em;
+  display:flex;flex-direction:column;
+}
+.term-line{display:flex;align-items:baseline;gap:10px;white-space:normal;word-break:break-word}
+.term-prompt{color:var(--pink);flex-shrink:0;user-select:none}
+.term-text{color:#ffffff}
+.term-cursor{
+  display:inline-block;width:9px;height:1em;
+  background:var(--pink);vertical-align:text-bottom;
+  animation:blink .75s step-end infinite;
+  margin-left:2px;
 }
 
-@media(max-width:640px){
-  #hero{padding-top:72px;padding-bottom:36px}
-  .hero-headline{margin-bottom:14px}
-  .hero-sub{font-size:.95rem;margin-bottom:24px}
+/* HERO PHOTO */
+.hero-photo{
+  --ring-gap:8px;--ring-width:3px;--ring2-gap:4px;--ring2-width:1px;
+  width:380px;height:380px;
+  border-radius:50%;
+  object-fit:cover;object-position:center top;
+  display:block;
+  box-shadow:
+    0 0 0 var(--ring-gap) var(--bg),
+    0 0 0 calc(var(--ring-gap) + var(--ring-width)) var(--pink),
+    0 0 0 calc(var(--ring-gap) + var(--ring-width) + var(--ring2-gap)) var(--bg),
+    0 0 0 calc(var(--ring-gap) + var(--ring-width) + var(--ring2-gap) + var(--ring2-width)) rgba(233,165,222,.3);
+}
+
+/* HERO — MOBILE */
+@media(max-width:900px){
+  #hero{min-height:0;padding-top:48px;padding-bottom:40px}
+  .hero-grid{grid-template-columns:1fr;grid-template-areas:"photo" "left";gap:32px}
+  .hero-photo{width:260px;height:260px}
+  .hero-terminal{font-size:12px}
 }
 
 /* BUTTONS */
@@ -468,61 +503,12 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
   .nav-inner{overflow-x:auto;padding:0 4px;gap:2px}
   .nav a{padding:7px 12px;font-size:.75rem}
   section{padding:56px 20px 48px}
-  .hero-headline{font-size:clamp(2rem,9vw,2.8rem)}
   .art-card{flex:0 0 280px;padding:20px}
   .track-section{padding:48px 0}
 }
 
 /* DIVIDER */
 .divider{height:1px;background:rgba(233,165,222,.08);max-width:1150px;margin:0 auto}
-
-/* HERO GRID */
-.hero-grid{
-  display:grid;grid-template-columns:1.1fr 0.9fr;
-  gap:48px;align-items:center;width:100%;
-}
-.hero-left{display:flex;flex-direction:column;align-items:flex-start}
-
-/* TERMINAL */
-.hero-terminal{
-  font-family:'Courier New',Courier,monospace;
-  font-size:15px;line-height:2em;
-  display:flex;flex-direction:column;gap:0;
-  min-width:0;align-self:center;overflow:visible;
-}
-.term-line{
-  display:flex;align-items:baseline;gap:10px;
-  white-space:nowrap;
-}
-.term-prompt{color:var(--pink);flex-shrink:0;user-select:none}
-.term-text{color:#ffffff}
-.term-cursor{
-  display:inline-block;width:9px;height:1em;
-  background:var(--pink);vertical-align:text-bottom;
-  animation:blink .75s step-end infinite;
-  margin-left:2px;
-}
-
-@media(min-width:901px){
-  .hero-terminal{min-width:540px}
-}
-@media(max-width:900px){
-  .hero-grid{grid-template-columns:1fr;gap:32px}
-  .hero-terminal{font-size:13px}
-  .term-line{white-space:normal;word-break:break-word}
-}
-
-/* HERO — LARGE SCREENS */
-@media(min-width:1440px){
-  #hero{
-    max-width:1600px;
-    padding-left:max(24px,calc((100vw - 1600px)/2));
-    padding-right:max(24px,calc((100vw - 1600px)/2));
-  }
-  .hero-grid{grid-template-columns:55% 45%;gap:64px}
-  .hero-left{max-width:none}
-  .hero-headline{font-size:clamp(3.8rem,4.5vw,5.6rem)}
-}
 </style>
 </head>
 <body>
@@ -562,8 +548,11 @@ footer p{color:var(--text2);font-size:.82rem;font-weight:300}
         <a class="btn btn-primary" href="#articles">Read My Work</a>
         <a class="btn btn-outline" href="#hire">Work With Me</a>
       </div>
+      <div class="hero-terminal" id="heroTerminal"></div>
     </div>
-    <div class="hero-terminal" id="heroTerminal"></div>
+    <div class="hero-photo-col">
+      <img class="hero-photo" src="{{ hero_photo }}" alt="Praise James, AI/ML Technical Writer and Developer Advocate" />
+    </div>
   </div>
 </section>
 
@@ -986,6 +975,7 @@ def home():
         newsletters=NEWSLETTERS,
         testimonials=TESTIMONIALS,
         articles_json=_json.dumps(ARTICLES),
+        hero_photo=HERO_PHOTO_DATA_URI,
     )
 
 
