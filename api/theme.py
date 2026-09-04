@@ -15,6 +15,7 @@ BASE_CSS = r"""
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
 :root{
+  color-scheme:dark;
   --ink:#0C0E10;
   --surface:#15181B;
   --surface-2:#1D2126;
@@ -173,6 +174,7 @@ img{max-width:100%;height:auto;display:block}
 @media (max-width:860px){
   .nav{gap:var(--sp-4)}
   .nav__cta{display:none}
+  .nav__brand{position:relative;z-index:260}
   .nav__links{
     position:fixed;left:0;right:0;top:0;
     height:100vh;height:100dvh;

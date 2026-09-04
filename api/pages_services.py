@@ -1,7 +1,7 @@
 """/services overview + /services/<slug> detail pages."""
-from components import arrow_link, breadcrumbs, cta_band, service_card, work_card
+from components import breadcrumbs, cta_band, service_card, work_card
 from content import SERVICES, find_service, real_work
-from seo import PageMeta, breadcrumb_list, json_ld
+from seo import PageMeta, breadcrumb_list
 from seo import service as service_ld
 from shell import render_page
 
@@ -16,20 +16,18 @@ OVERVIEW_META = PageMeta(
 
 
 def overview() -> str:
-    intro = "".join(f"""
-    <div class="cs-row">
-      <dt>{s['title']}</dt>
-      <dd>{s['card']} <br><span class="muted">{arrow_link('Explore ' + s['title'], '/services/' + s['slug'])}</span></dd>
-    </div>""" for s in SERVICES)
     body = f"""
 <section class="section">
   <div class="container">
     <span class="eyebrow">Services</span>
     <h1>Technical content built for complex products.</h1>
     <p class="lede" style="margin-top:var(--sp-5)">I help AI and developer-focused companies explain
-    what they are building, educate their audience, and build technical authority.</p>
+    what they are building, educate their audience, and build technical authority. Every engagement
+    runs on the same principles: technical depth, a structure the reader can follow, and content
+    written for the person who has to use it.</p>
     <div class="grid grid--4" style="margin-top:var(--sp-8)">{"".join(service_card(s) for s in SERVICES)}</div>
-    <dl style="margin-top:var(--sp-9)">{intro}</dl>
+    <p style="margin-top:var(--sp-7)" class="muted">Not sure which fits? <a href="/contact">Describe the
+    project</a> and I'll tell you.</p>
   </div>
 </section>
 {cta_band("Have a project in mind?", "Start a project →", "/contact")}

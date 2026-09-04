@@ -29,7 +29,7 @@ _PHOTO_BYTES = base64.b64decode(HERO_PHOTO_DATA_URI.split(",", 1)[1])
 
 
 def _html(markup: str) -> Response:
-    return Response(markup, mimetype="text/html; charset=utf-8")
+    return Response(markup, mimetype="text/html")
 
 
 @app.route("/")
@@ -143,7 +143,7 @@ def not_found(_e):
                  description="This page could not be found.", path="/404"),
         body, path="/404",
     )
-    return Response(page, status=404, mimetype="text/html; charset=utf-8")
+    return Response(page, status=404, mimetype="text/html")
 
 
 # Vercel expects the module-level `app`.
