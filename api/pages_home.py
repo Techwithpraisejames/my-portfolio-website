@@ -1,8 +1,7 @@
 """Homepage sales page. Section order is fixed by the brief."""
 from components import arrow_link, cta_band, insight_card, service_card, work_card
 from content import (
-    CASE_STUDIES, CLIENTS, INSIGHTS, NEWSLETTER, PILLARS, PROCESS, PUBLICATIONS,
-    SERVICES, featured_work,
+    CASE_STUDIES, CLIENTS, INSIGHTS, NEWSLETTER, PILLARS, PROCESS, SERVICES, featured_work,
 )
 from seo import PageMeta, person, website
 from shell import render_page
@@ -42,13 +41,11 @@ def _hero() -> str:
 
 def _proof() -> str:
     names = " &middot; ".join(c for c in CLIENTS)
-    pubs = " &middot; ".join(PUBLICATIONS)
     return f"""
 <section class="proof">
   <div class="container">
     <p class="proof__label">Written for</p>
     <p class="proof__names">{names}</p>
-    <p class="proof__pubs">Published in {pubs}</p>
   </div>
 </section>
 """.strip()

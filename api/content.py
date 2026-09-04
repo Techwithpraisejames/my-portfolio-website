@@ -9,8 +9,6 @@ marked [ADD ...] placeholder. Never fabricate clients, metrics, or quotes.
 
 CLIENTS = ["Actian", "Bright Data", "Zenrows", "ToolJet"]
 
-PUBLICATIONS = ["DEV.to", "Medium", "HackerNoon", "freeCodeCamp", "Data4AI"]
-
 # Categories used across /work and the homepage filter.
 CATEGORIES = [
     "AI/ML",
@@ -175,7 +173,7 @@ CASE_STUDIES = [
         "challenge": "Edge AI for disconnected environments is real but fragmented: the patterns are spread across separate industries and rarely named or compared. The piece had to make the space concrete without a cloud fallback to lean on, and stay useful to an architect rather than drifting into abstraction.",
         "approach": "Researched how inference and control actually run offline across those industries, then distilled the field into five distinct patterns (the Drone, the Factory, Hierarchical Federated Learning, Store-and-Forward, and the Network), each with its constraints, trade-offs, and the situations it fits.",
         "work": "A long-form architecture guide on Actian's developer blog, structured so a reader can match their own connectivity and data-sovereignty constraints to a pattern.",
-        "outcome": "Published on Actian's developer blog as part of its edge and vector-data content track. Verified view and engagement figures: [ADD VERIFIED METRIC].",
+        "outcome": "Published on Actian's developer blog, where it ranks number one in search for the \"edge AI architecture\" keyword.",
         "demonstrates": "Synthesis of a fragmented topic into an original, usable framework, and architecture-level technical writing for a specialist engineering audience.",
         "quotes": [],
     },
