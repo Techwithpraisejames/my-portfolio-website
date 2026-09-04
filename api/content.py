@@ -129,11 +129,13 @@ CASE_STUDIES = [
         "service": "technical-thought-leadership",
         "summary": "Interviews with nine senior technical writers, turned into a resource on how technical communicators drive impact beyond documentation.",
         "brief": "The technical writing community talks constantly about tools and process, and rarely about business impact. The goal was a resource that made the senior-level view of the role visible to practitioners and the people who manage them.",
-        "challenge": "The most valuable parts of the job, like shaping product decisions, reducing support load, and unblocking other teams, are diffuse and hard to point to. Nine practitioners meant nine different vocabularies for the same underlying work.",
-        "approach": "Structured interviews with senior technical writers at companies including Google, Mastercard, and Novu. Answers were coded into recurring themes, then organized into a narrative a reader could act on rather than a transcript dump.",
+        "challenge": "The value of the role is often spread across product decisions, support, engineering, and internal communication, which makes it difficult to describe with a single metric or job description.",
+        "approach": "Interviewed nine senior technical writers, including practitioners from companies such as Google and Mastercard. Coded the interviews for recurring themes and used those themes to build the final narrative.",
         "work": "A long-form resource built around the interview findings, published and distributed to the technical writing community.",
-        "outcome": "The resource sparked sustained discussion among senior practitioners on LinkedIn and shifted how several of them framed the value of the role inside their own organizations. Quantitative reach figures: [ADD VERIFIED METRIC].",
+        "outcome": "The resource sparked sustained discussion among senior practitioners on LinkedIn, reached around 700 technical writers, and shifted how several of them framed the value of the role inside their own organizations.",
         "demonstrates": "Original research design, synthesis of many expert sources into one clear argument, and thought-leadership content that a specific professional audience engages with.",
+        "resource_url": "https://drive.usercontent.google.com/u/2/uc?id=1186xYxB2RtNuwsPwWPBzavyCLjBQ79tI&export=download",
+        "resource_label": "Read the resource",
         "quotes": [
             {
                 "quote": "It should be required reading for anyone who still thinks technical writing is just a finishing step. The value is invisible by design and this makes it visible.",

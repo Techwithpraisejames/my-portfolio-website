@@ -118,6 +118,12 @@ def case_study(slug: str):
             for q in c["quotes"]
         )
         quotes = f'<div style="margin-top:var(--sp-7)">{quotes}</div>'
+    resource = ""
+    if c.get("resource_url"):
+        label = esc(c.get("resource_label", "Read the resource"))
+        resource = (f'<p style="margin-top:var(--sp-7)">'
+                    f'<a class="btn btn--ghost" href="{esc(c["resource_url"])}" rel="noopener">'
+                    f'{label} &rarr;</a></p>')
     service_link = ""
     if c.get("service"):
         s = find_service(c["service"])
@@ -138,6 +144,7 @@ def case_study(slug: str):
     <p class="lede" style="margin-top:var(--sp-5)">{esc(c['summary'])}</p>
     <p class="card__meta" style="margin-top:var(--sp-4)">Client: {esc(c['client'])}</p>
     <dl style="margin-top:var(--sp-7)">{rows}</dl>
+    {resource}
     {quotes}
     {service_link}
     <p style="margin-top:var(--sp-8)">Need this kind of content?
