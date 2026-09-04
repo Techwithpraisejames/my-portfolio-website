@@ -175,7 +175,7 @@ CASE_STUDIES = [
         "challenge": "Edge AI for disconnected environments is real but fragmented: the patterns are spread across separate industries and rarely named or compared. The piece had to make the space concrete without a cloud fallback to lean on, and stay useful to an architect rather than drifting into abstraction.",
         "approach": "Researched how inference and control actually run offline across those industries, then distilled the field into five distinct patterns — the Drone, the Factory, Hierarchical Federated Learning, Store-and-Forward, and the Network — each with its constraints, trade-offs, and the situations it fits.",
         "work": "A long-form architecture guide on Actian's developer blog, structured so a reader can match their own connectivity and data-sovereignty constraints to a pattern.",
-        "outcome": "One of the most-read pieces on Actian's developer channel, with roughly 125K views.",
+        "outcome": "Published on Actian's developer blog as part of its edge and vector-data content track. Verified view and engagement figures: [ADD VERIFIED METRIC].",
         "demonstrates": "Synthesis of a fragmented topic into an original, usable framework, and architecture-level technical writing for a specialist engineering audience.",
         "quotes": [],
     },
@@ -351,10 +351,9 @@ SOCIALS = [
 
 CONTACT_EMAIL = "techwithpraisejames@gmail.com"
 
-# Metrics already published on the prior version of this site. Carried forward as
-# the owner's own figures — not re-derived, not added to.
+# The owner's own figures. Not re-derived, not added to — adjust values here only.
 METRICS = [
-    {"value": "340K+", "label": "organic visits across 50+ published articles"},
+    {"value": "125K+", "label": "organic views across 50+ published articles"},
     {"value": "300K+", "label": "impressions across LinkedIn and X in three months"},
     {"value": "500", "label": "newsletter subscribers in the first month"},
 ]
