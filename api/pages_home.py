@@ -105,7 +105,7 @@ def _why() -> str:
 
 
 def _case_studies() -> str:
-    real = [c for c in CASE_STUDIES if not c.get("placeholder")][:2]
+    real = [c for c in CASE_STUDIES if not c.get("placeholder")][:3]
     cards = "".join(f"""
     <a class="card" href="/work/case-studies/{c['slug']}">
       <span class="card__kicker">Case study</span>
@@ -124,7 +124,7 @@ def _case_studies() -> str:
       <h2>How the work gets done.</h2>
       <p>The brief, the technical challenge, the approach, and what happened next.</p>
     </div>
-    <div class="grid grid--2">{cards}</div>
+    <div class="grid grid--3">{cards}</div>
     <p style="margin-top:var(--sp-6)">{arrow_link("All case studies", "/work/case-studies")}</p>
   </div>
 </section>

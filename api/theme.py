@@ -242,10 +242,11 @@ img{max-width:100%;height:auto;display:block}
 /* ---------- generic grid of cards ---------- */
 .grid{display:grid;gap:var(--sp-5)}
 .grid--2{grid-template-columns:repeat(2,1fr)}
-.grid--3{grid-template-columns:repeat(3,1fr)}
+.grid--3{grid-template-columns:repeat(2,1fr)}
 .grid--4{grid-template-columns:repeat(2,1fr)}
+@media (min-width:1000px){.grid--3{grid-template-columns:repeat(3,1fr)}}
 @media (min-width:900px){.grid--4{grid-template-columns:repeat(4,1fr)}}
-@media (max-width:760px){
+@media (max-width:620px){
   .grid--2,.grid--3,.grid--4{grid-template-columns:1fr}
 }
 

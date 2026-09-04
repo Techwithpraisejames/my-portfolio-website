@@ -82,7 +82,7 @@ def case_studies_index() -> str:
     <h1>The work behind the work.</h1>
     <p class="lede" style="margin-top:var(--sp-5)">Each case study covers the brief, the technical
     challenge, the approach, what was produced, and the outcome.</p>
-    <div class="grid grid--2" style="margin-top:var(--sp-7)">{cards}</div>
+    <div class="grid grid--3" style="margin-top:var(--sp-7)">{cards}</div>
   </div>
 </section>
 {cta_band("Need this kind of content?", "Hire me →", "/contact")}

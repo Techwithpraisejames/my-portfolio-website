@@ -7,7 +7,7 @@ marked [ADD ...] placeholder — never fabricate clients, metrics, or quotes.
 
 # ------------------------------------------------------------------ proof
 
-CLIENTS = ["Actian", "Bright Data", "ZenRows", "Hackmamba", "[ADD CLIENT]"]
+CLIENTS = ["Actian", "Bright Data", "Zenrows", "ToolJet"]
 
 PUBLICATIONS = ["DEV.to", "Medium", "HackerNoon", "freeCodeCamp", "Data4AI"]
 
@@ -26,17 +26,25 @@ WORK = [
     {
         "title": "Best Apify Alternative for Large-Scale Scraping",
         "url": "https://www.zenrows.com/blog/best-apify-alternative-for-large-scale-scraping",
-        "publication": "ZenRows",
+        "publication": "Zenrows",
         "category": "Developer Tools",
         "summary": "An original benchmark — 200 requests across 7 targets — comparing performance and cost for large-scale scraping.",
         "featured": True,
     },
     {
-        "title": "Build a Stateful Web Research Agent with ZenRows and LangGraph",
+        "title": "Build a Stateful Web Research Agent with Zenrows and LangGraph",
         "url": "https://dev.to/zenrows/how-to-build-a-stateful-web-research-agent-with-zenrows-and-langgraph-1co7",
         "publication": "DEV.to",
         "category": "Technical Tutorials",
         "summary": "A production-grade tutorial for a stateful AI agent with retry logic and live web scraping.",
+        "featured": True,
+    },
+    {
+        "title": "Integrating Zenrows into smolagents for Production Web Access",
+        "url": "https://www.zenrows.com/blog/zenrows-smolagents",
+        "publication": "Zenrows",
+        "category": "Technical Tutorials",
+        "summary": "A step-by-step guide to swapping smolagents' default web tool for a Zenrows-powered one so AI agents can read JavaScript-rendered and bot-protected pages.",
         "featured": True,
     },
     {
@@ -111,15 +119,6 @@ WORK = [
         "summary": "A beginner-friendly walkthrough of building and interpreting decision tree models.",
         "featured": False,
     },
-    {
-        "title": "[ADD PORTFOLIO ITEM]",
-        "url": "",
-        "publication": "",
-        "category": "Product Content",
-        "summary": "Placeholder for a stronger product-led piece once selected.",
-        "featured": False,
-        "placeholder": True,
-    },
 ]
 
 # ------------------------------------------------------------------ case studies
@@ -153,31 +152,32 @@ CASE_STUDIES = [
     {
         "slug": "zenrows-large-scale-scraping-benchmark",
         "title": "A Reproducible Benchmark for Large-Scale Web Scraping",
-        "client": "ZenRows",
+        "client": "Zenrows",
         "service": "product-led-content",
         "summary": "An original, reproducible benchmark comparing scraping platforms on performance and cost, written as a decision tool rather than a pitch.",
-        "brief": "ZenRows needed a comparison piece for teams evaluating scraping infrastructure at scale — credible enough that an engineer would trust it, specific enough to act on.",
+        "brief": "Zenrows needed a comparison piece for teams evaluating scraping infrastructure at scale — credible enough that an engineer would trust it, specific enough to act on.",
         "challenge": "Comparisons in this space are usually vague or self-serving. The piece had to define a fair methodology, run it across several real targets, and report results honestly, including where the product was not the fastest option.",
         "approach": "Ran a defined test of 200 requests across 7 target sites, compared the platforms on performance and cost, and documented the method so a reader could reproduce it.",
-        "work": "A published benchmark article on the ZenRows blog, with the methodology, raw comparisons, and a clear read on which tool fits which use case.",
-        "outcome": "Published as a reference comparison on the ZenRows blog. Engagement and ranking data: [ADD VERIFIED METRIC].",
+        "work": "A published benchmark article on the Zenrows blog, with the methodology, raw comparisons, and a clear read on which tool fits which use case.",
+        "outcome": "Published as Zenrows' reference comparison for large-scale scraping, and ranks in search for \"Apify vs Zenrows\" and related evaluation queries.",
         "demonstrates": "Benchmark design, technical rigor, and product-led content that earns trust by being useful first.",
-        "quotes": [],
+        "quotes": [
+            {"quote": "Incredible as usual.", "name": "Henry", "role": "Content Marketer"},
+        ],
     },
     {
-        "slug": "add-case-study",
-        "title": "[ADD CASE STUDY]",
-        "client": "[ADD CLIENT]",
+        "slug": "edge-ai-architecture-patterns",
+        "title": "Turning a Fragmented Topic Into Five Usable Architecture Patterns",
+        "client": "Actian",
         "service": "technical-articles",
-        "summary": "Placeholder for a third case study — likely the Actian vector database content series.",
-        "brief": "[ADD CASE STUDY]",
-        "challenge": "[ADD CASE STUDY]",
-        "approach": "[ADD CASE STUDY]",
-        "work": "[ADD CASE STUDY]",
-        "outcome": "[ADD VERIFIED METRIC]",
-        "demonstrates": "[ADD CASE STUDY]",
+        "summary": "An architecture guide that organized the scattered field of disconnected edge AI into five named, comparable patterns engineers could design against.",
+        "brief": "Actian wanted to reach engineers building AI for places where cloud connectivity cannot be assumed — mining, offshore energy, manufacturing, defense — and to establish authority on edge and offline-first data architecture.",
+        "challenge": "Edge AI for disconnected environments is real but fragmented: the patterns are spread across separate industries and rarely named or compared. The piece had to make the space concrete without a cloud fallback to lean on, and stay useful to an architect rather than drifting into abstraction.",
+        "approach": "Researched how inference and control actually run offline across those industries, then distilled the field into five distinct patterns — the Drone, the Factory, Hierarchical Federated Learning, Store-and-Forward, and the Network — each with its constraints, trade-offs, and the situations it fits.",
+        "work": "A long-form architecture guide on Actian's developer blog, structured so a reader can match their own connectivity and data-sovereignty constraints to a pattern.",
+        "outcome": "One of the most-read pieces on Actian's developer channel, with roughly 125K views.",
+        "demonstrates": "Synthesis of a fragmented topic into an original, usable framework, and architecture-level technical writing for a specialist engineering audience.",
         "quotes": [],
-        "placeholder": True,
     },
 ]
 
