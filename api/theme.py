@@ -174,7 +174,8 @@ img{max-width:100%;height:auto;display:block}
   .nav{gap:var(--sp-4)}
   .nav__cta{display:none}
   .nav__links{
-    position:fixed;inset:0;top:0;
+    position:fixed;left:0;right:0;top:0;
+    height:100vh;height:100dvh;
     flex-direction:column;justify-content:center;align-items:flex-start;
     gap:var(--sp-5);padding:var(--gutter);
     background:var(--ink);

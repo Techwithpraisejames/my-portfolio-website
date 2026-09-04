@@ -4,9 +4,14 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from flask import Flask, Response
+from flask import Flask, Response, abort
 
+import pages_about
+import pages_contact
 import pages_home
+import pages_insights
+import pages_services
+import pages_work
 from photo_data import HERO_PHOTO_DATA_URI
 from seo import SITE_URL
 
@@ -30,6 +35,52 @@ def _html(markup: str) -> Response:
 @app.route("/")
 def home():
     return _html(pages_home.render())
+
+
+@app.route("/work")
+def work():
+    return _html(pages_work.index())
+
+
+@app.route("/work/case-studies")
+def case_studies():
+    return _html(pages_work.case_studies_index())
+
+
+@app.route("/work/case-studies/<slug>")
+def case_study(slug):
+    page = pages_work.case_study(slug)
+    if page is None:
+        abort(404)
+    return _html(page)
+
+
+@app.route("/services")
+def services():
+    return _html(pages_services.overview())
+
+
+@app.route("/services/<slug>")
+def service_detail(slug):
+    page = pages_services.detail(slug)
+    if page is None:
+        abort(404)
+    return _html(page)
+
+
+@app.route("/about")
+def about():
+    return _html(pages_about.render())
+
+
+@app.route("/insights")
+def insights():
+    return _html(pages_insights.render())
+
+
+@app.route("/contact")
+def contact():
+    return _html(pages_contact.render())
 
 
 # ---------------- media ----------------
