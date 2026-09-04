@@ -1,7 +1,5 @@
 """Homepage — the sales page. Section order is fixed by the brief."""
-from components import (
-    arrow_link, case_study_card, cta_band, insight_card, service_card, work_card,
-)
+from components import arrow_link, cta_band, insight_card, service_card, work_card
 from content import (
     CASE_STUDIES, CLIENTS, INSIGHTS, NEWSLETTER, PILLARS, PROCESS, PUBLICATIONS,
     SERVICES, featured_work,
@@ -108,7 +106,16 @@ def _why() -> str:
 
 def _case_studies() -> str:
     real = [c for c in CASE_STUDIES if not c.get("placeholder")][:2]
-    cards = "".join(case_study_card(c) for c in real)
+    cards = "".join(f"""
+    <a class="card" href="/work/case-studies/{c['slug']}">
+      <span class="card__kicker">Case study</span>
+      <span class="card__title">{c['title']}</span>
+      <span class="card__meta">{c['client']}</span>
+      <p><strong>Challenge.</strong> {c['challenge']}</p>
+      <p><strong>Approach.</strong> {c['approach']}</p>
+      <p><strong>Outcome.</strong> {c['outcome']}</p>
+      <span class="card__foot"><span class="arrow-link">View case study</span></span>
+    </a>""" for c in real)
     return f"""
 <section class="section">
   <div class="container">

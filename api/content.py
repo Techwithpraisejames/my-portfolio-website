@@ -158,7 +158,7 @@ CASE_STUDIES = [
         "summary": "An original, reproducible benchmark comparing scraping platforms on performance and cost, written as a decision tool rather than a pitch.",
         "brief": "ZenRows needed a comparison piece for teams evaluating scraping infrastructure at scale — credible enough that an engineer would trust it, specific enough to act on.",
         "challenge": "Comparisons in this space are usually vague or self-serving. The piece had to define a fair methodology, run it across several real targets, and report results honestly, including where the product was not the fastest option.",
-        "approach": "Designed a test of 200 requests across 7 target sites, measured success rate, latency, and cost per outcome, and documented the method so a reader could reproduce it.",
+        "approach": "Ran a defined test of 200 requests across 7 target sites, compared the platforms on performance and cost, and documented the method so a reader could reproduce it.",
         "work": "A published benchmark article on the ZenRows blog, with the methodology, raw comparisons, and a clear read on which tool fits which use case.",
         "outcome": "Published as a reference comparison on the ZenRows blog. Engagement and ranking data: [ADD VERIFIED METRIC].",
         "demonstrates": "Benchmark design, technical rigor, and product-led content that earns trust by being useful first.",
