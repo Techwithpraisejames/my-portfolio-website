@@ -88,7 +88,7 @@ def arrow_link(label: str, href: str, external: bool = False) -> str:
 
 def work_card(item: dict) -> str:
     if item.get("placeholder"):
-        return f'<div class="card placeholder">{esc(item["title"])} &mdash; {esc(item["summary"])}</div>'
+        return f'<div class="card placeholder">{esc(item["title"])}. {esc(item["summary"])}</div>'
     meta = esc(item["publication"])
     return f"""
 <a class="card" href="{item['url']}" rel="noopener" data-category="{esc(item['category'])}">

@@ -93,7 +93,7 @@ def media_praise():
 
 @app.route("/og.jpg")
 def og_image():
-    # [ADD DEDICATED 1200x630 OG IMAGE] — reuses the profile photo for now.
+    # [ADD DEDICATED 1200x630 OG IMAGE]. Reuses the profile photo for now.
     return Response(_PHOTO_BYTES, mimetype="image/jpeg",
                     headers={"Cache-Control": "public, max-age=86400"})
 

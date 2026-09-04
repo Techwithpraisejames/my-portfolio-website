@@ -17,7 +17,7 @@ CS_META = PageMeta(
     title="Case studies | Praise James",
     description=(
         "How specific technical content projects were briefed, researched, structured, and "
-        "delivered — and what happened next."
+        "delivered, and what happened next."
     ),
     path="/work/case-studies",
 )
@@ -114,7 +114,7 @@ def case_study(slug: str):
     if c.get("quotes"):
         quotes = "".join(
             f'<figure class="card" style="margin-top:var(--sp-4)"><blockquote>{esc(q["quote"])}</blockquote>'
-            f'<figcaption class="card__meta">&mdash; {esc(q["name"])}, {esc(q["role"])}</figcaption></figure>'
+            f'<figcaption class="card__meta">{esc(q["name"])}, {esc(q["role"])}</figcaption></figure>'
             for q in c["quotes"]
         )
         quotes = f'<div style="margin-top:var(--sp-7)">{quotes}</div>'

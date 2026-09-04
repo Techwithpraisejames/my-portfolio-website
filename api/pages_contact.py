@@ -1,4 +1,4 @@
-"""/contact — mailto-based project inquiry form."""
+"""/contact page. Mailto-based project inquiry form."""
 from components import breadcrumbs, esc
 from content import CONTACT_EMAIL, PROJECT_TYPES
 from seo import PageMeta, breadcrumb_list
@@ -7,7 +7,7 @@ from shell import render_page
 META = PageMeta(
     title="Hire me | Contact Praise James",
     description=(
-        "Tell Praise James what you're building and what you need help with — technical articles, "
+        "Tell Praise James what you're building and what you need help with: technical articles, "
         "developer tutorials, product-led content, or thought leadership."
     ),
     path="/contact",
@@ -40,7 +40,7 @@ FORM_SCRIPT = f"""
       'Project:',g('details')
     ];
     var href='mailto:{CONTACT_EMAIL}'
-      +'?subject='+encodeURIComponent('Project inquiry — '+(g('need')||'Technical content')+' — '+name)
+      +'?subject='+encodeURIComponent('Project inquiry: '+(g('need')||'Technical content')+' from '+name)
       +'&body='+encodeURIComponent(lines.join('\\n'));
     window.location.href=href;
     var note=document.getElementById('form-note');

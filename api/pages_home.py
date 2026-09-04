@@ -1,4 +1,4 @@
-"""Homepage — the sales page. Section order is fixed by the brief."""
+"""Homepage sales page. Section order is fixed by the brief."""
 from components import arrow_link, cta_band, insight_card, service_card, work_card
 from content import (
     CASE_STUDIES, CLIENTS, INSIGHTS, NEWSLETTER, PILLARS, PROCESS, PUBLICATIONS,
@@ -160,7 +160,7 @@ def _about_teaser() -> str:
     <div class="stack" style="max-width:60ch">
       <p>I came into technical writing from writing, and into AI and developer tools from a background in
       mathematics and hands-on machine learning. Long enough in to know the hardest part is not
-      understanding the technology &mdash; it is knowing what your reader actually needs to walk away with.</p>
+      understanding the technology. It is knowing what your reader actually needs to walk away with.</p>
       <p>{arrow_link("More about how I work", "/about")}</p>
     </div>
   </div>

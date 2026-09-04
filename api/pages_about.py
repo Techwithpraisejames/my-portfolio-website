@@ -1,4 +1,4 @@
-"""/about — human, not a resume."""
+"""/about page. Human, not a resume."""
 from components import breadcrumbs, cta_band, esc
 from content import METRICS, SOCIALS, VIDEOS, YOUTUBE_CHANNEL
 from seo import PageMeta, breadcrumb_list, person
@@ -7,7 +7,7 @@ from shell import render_page
 META = PageMeta(
     title="About Praise James | AI technical writer",
     description=(
-        "Praise James writes about AI and developer technology for a living — with a background "
+        "Praise James writes about AI and developer technology for a living, with a background "
         "in mathematics and machine learning and a focus on technical storytelling."
     ),
     path="/about",
@@ -31,7 +31,7 @@ def render() -> str:
     <h1>I'm Praise. I write about technology for a living.</h1>
 
     <p>I came into technical writing from writing. The move into AI and developer tools came from a
-    background in mathematics and hands-on work with machine learning &mdash; enough to read a paper,
+    background in mathematics and hands-on work with machine learning: enough to read a paper,
     run a model, and know when an explanation is hiding something.</p>
 
     <p>What I learned along the way is that understanding the technology is the easy half. The hard
@@ -40,12 +40,12 @@ def render() -> str:
 
     <h2>What I work on</h2>
     <p>Technical articles, developer tutorials, product-led content, and technical thought leadership
-    for AI and developer-focused companies &mdash; explainers, benchmarks, integration guides, and
+    for AI and developer-focused companies: explainers, benchmarks, integration guides, and
     founder points of view. Topics range across AI/ML, developer tooling, vector databases, web data,
     and the systems developers build with.</p>
 
     <h2>How I think about writing</h2>
-    <p><strong>Technical depth.</strong> I spend real time with the subject before writing &mdash;
+    <p><strong>Technical depth.</strong> I spend real time with the subject before writing:
     reading the docs, running the thing, talking to the engineers.</p>
     <p><strong>Storytelling.</strong> I structure content so a reader can follow the argument and act
     on it, rather than presenting a wall of correct information.</p>
@@ -54,7 +54,6 @@ def render() -> str:
 
     <h2>Selected proof</h2>
     <dl>{metrics}</dl>
-    <p class="muted">Additional credentials and references: [ADD CREDENTIAL]</p>
 
     <h2>Elsewhere</h2>
     <ul class="link-list">{links}</ul>

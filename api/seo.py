@@ -8,7 +8,7 @@ from dataclasses import dataclass, field
 
 SITE_URL = "https://techwithpraisejames.vercel.app"
 SITE_NAME = "Praise James"
-# [ADD DEDICATED 1200x630 OG IMAGE] — currently reuses the profile photo, served by /og.jpg
+# [ADD DEDICATED 1200x630 OG IMAGE]. Currently reuses the profile photo, served by /og.jpg
 OG_IMAGE = SITE_URL + "/og.jpg"
 
 # Verified profiles only (carried from the previous site).
@@ -103,7 +103,7 @@ def website() -> dict:
 
 
 def breadcrumb_list(trail: list[tuple[str, str]]) -> dict:
-    """trail: [(name, path), ...] — last item is the current page."""
+    """trail: [(name, path), ...]; last item is the current page."""
     return {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -146,7 +146,7 @@ def article(headline: str, description: str, path: str) -> dict:
 
 
 def item_list(items: list[tuple[str, str]]) -> dict:
-    """items: [(name, url), ...] — url may be external."""
+    """items: [(name, url), ...]; url may be external."""
     return {
         "@context": "https://schema.org",
         "@type": "ItemList",

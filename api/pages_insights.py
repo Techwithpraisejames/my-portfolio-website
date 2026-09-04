@@ -1,4 +1,4 @@
-"""/insights — articles + newsletter hub."""
+"""/insights page. Articles and newsletter hub."""
 from components import breadcrumbs, cta_band, esc, insight_card
 from content import INSIGHTS, NEWSLETTER
 from seo import PageMeta, breadcrumb_list, item_list
@@ -22,7 +22,7 @@ def render() -> str:
     <span class="eyebrow">Insights</span>
     <h1>Writing about how technical content gets made.</h1>
     <p class="lede" style="margin-top:var(--sp-5)">I publish <em>{esc(NEWSLETTER['name'])}</em>, a
-    newsletter on the craft of technical writing &mdash; frameworks, structure, and the decisions that
+    newsletter on the craft of technical writing: frameworks, structure, and the decisions that
     make a piece land. {esc(NEWSLETTER['pitch'])}</p>
     <div class="grid grid--3" style="margin-top:var(--sp-7)">{cards}
       <div class="card placeholder">[ADD ARTICLE]</div>

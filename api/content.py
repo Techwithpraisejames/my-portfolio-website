@@ -2,7 +2,7 @@
 
 Edit this file to add or change work, case studies, services, insights, and
 proof. No component code needs to change. Anything not yet real is a clearly
-marked [ADD ...] placeholder — never fabricate clients, metrics, or quotes.
+marked [ADD ...] placeholder. Never fabricate clients, metrics, or quotes.
 """
 
 # ------------------------------------------------------------------ proof
@@ -28,7 +28,7 @@ WORK = [
         "url": "https://www.zenrows.com/blog/best-apify-alternative-for-large-scale-scraping",
         "publication": "Zenrows",
         "category": "Developer Tools",
-        "summary": "An original benchmark — 200 requests across 7 targets — comparing performance and cost for large-scale scraping.",
+        "summary": "An original benchmark of 200 requests across 7 targets, comparing performance and cost for large-scale scraping.",
         "featured": True,
     },
     {
@@ -131,7 +131,7 @@ CASE_STUDIES = [
         "service": "technical-thought-leadership",
         "summary": "Interviews with nine senior technical writers, turned into a resource on how technical communicators drive impact beyond documentation.",
         "brief": "The technical writing community talks constantly about tools and process, and rarely about business impact. The goal was a resource that made the senior-level view of the role visible to practitioners and the people who manage them.",
-        "challenge": "The most valuable parts of the job — shaping product decisions, reducing support load, unblocking other teams — are diffuse and hard to point to. Nine practitioners meant nine different vocabularies for the same underlying work.",
+        "challenge": "The most valuable parts of the job, like shaping product decisions, reducing support load, and unblocking other teams, are diffuse and hard to point to. Nine practitioners meant nine different vocabularies for the same underlying work.",
         "approach": "Structured interviews with senior technical writers at companies including Google, Mastercard, and Novu. Answers were coded into recurring themes, then organized into a narrative a reader could act on rather than a transcript dump.",
         "work": "A long-form resource built around the interview findings, published and distributed to the technical writing community.",
         "outcome": "The resource sparked sustained discussion among senior practitioners on LinkedIn and shifted how several of them framed the value of the role inside their own organizations. Quantitative reach figures: [ADD VERIFIED METRIC].",
@@ -155,7 +155,7 @@ CASE_STUDIES = [
         "client": "Zenrows",
         "service": "product-led-content",
         "summary": "An original, reproducible benchmark comparing scraping platforms on performance and cost, written as a decision tool rather than a pitch.",
-        "brief": "Zenrows needed a comparison piece for teams evaluating scraping infrastructure at scale — credible enough that an engineer would trust it, specific enough to act on.",
+        "brief": "Zenrows needed a comparison piece for teams evaluating scraping infrastructure at scale: credible enough that an engineer would trust it, specific enough to act on.",
         "challenge": "Comparisons in this space are usually vague or self-serving. The piece had to define a fair methodology, run it across several real targets, and report results honestly, including where the product was not the fastest option.",
         "approach": "Ran a defined test of 200 requests across 7 target sites, compared the platforms on performance and cost, and documented the method so a reader could reproduce it.",
         "work": "A published benchmark article on the Zenrows blog, with the methodology, raw comparisons, and a clear read on which tool fits which use case.",
@@ -171,9 +171,9 @@ CASE_STUDIES = [
         "client": "Actian",
         "service": "technical-articles",
         "summary": "An architecture guide that organized the scattered field of disconnected edge AI into five named, comparable patterns engineers could design against.",
-        "brief": "Actian wanted to reach engineers building AI for places where cloud connectivity cannot be assumed — mining, offshore energy, manufacturing, defense — and to establish authority on edge and offline-first data architecture.",
+        "brief": "Actian wanted to reach engineers building AI for places where cloud connectivity cannot be assumed, like mining, offshore energy, manufacturing, and defense, and to establish authority on edge and offline-first data architecture.",
         "challenge": "Edge AI for disconnected environments is real but fragmented: the patterns are spread across separate industries and rarely named or compared. The piece had to make the space concrete without a cloud fallback to lean on, and stay useful to an architect rather than drifting into abstraction.",
-        "approach": "Researched how inference and control actually run offline across those industries, then distilled the field into five distinct patterns — the Drone, the Factory, Hierarchical Federated Learning, Store-and-Forward, and the Network — each with its constraints, trade-offs, and the situations it fits.",
+        "approach": "Researched how inference and control actually run offline across those industries, then distilled the field into five distinct patterns (the Drone, the Factory, Hierarchical Federated Learning, Store-and-Forward, and the Network), each with its constraints, trade-offs, and the situations it fits.",
         "work": "A long-form architecture guide on Actian's developer blog, structured so a reader can match their own connectivity and data-sovereignty constraints to a pattern.",
         "outcome": "Published on Actian's developer blog as part of its edge and vector-data content track. Verified view and engagement figures: [ADD VERIFIED METRIC].",
         "demonstrates": "Synthesis of a fragmented topic into an original, usable framework, and architecture-level technical writing for a specialist engineering audience.",
@@ -198,7 +198,7 @@ SERVICES = [
             "Industry and market analysis",
             "Educational series and evergreen reference content",
         ],
-        "approach": "Time spent understanding the subject before a word is written — reading the docs, running the thing, talking to the engineers. Then a structure that carries the reader from problem to understanding, not a wall of correct facts.",
+        "approach": "Time spent understanding the subject before a word is written: reading the docs, running the thing, talking to the engineers. Then a structure that carries the reader from problem to understanding, not a wall of correct facts.",
         "related_categories": ["AI/ML", "Thought Leadership"],
     },
     {
@@ -206,7 +206,7 @@ SERVICES = [
         "title": "Developer Tutorials",
         "card": "Step-by-step how-to guides, API walkthroughs, and integration tutorials developers can actually follow.",
         "tagline": "Tutorials a developer can follow start to finish without getting stuck.",
-        "what_it_is": "Hands-on guides that take a developer from nothing to a working result. How-to guides, API tutorials, integration guides, implementation walkthroughs, and technical walkthroughs — all tested end to end.",
+        "what_it_is": "Hands-on guides that take a developer from nothing to a working result. How-to guides, API tutorials, integration guides, implementation walkthroughs, and technical walkthroughs, all tested end to end.",
         "who_for": "Developer tool companies, API-first products, and platforms whose adoption depends on a smooth first integration.",
         "deliverables": [
             "How-to and getting-started guides",
@@ -315,7 +315,7 @@ TESTIMONIALS = [
 PILLARS = [
     {
         "title": "Technical depth",
-        "body": "Real time spent understanding the subject before writing a word — reading the docs, running the code, talking to the engineers. Not a generalist summarizing.",
+        "body": "Real time spent understanding the subject before writing a word: reading the docs, running the code, talking to the engineers. Not a generalist summarizing.",
     },
     {
         "title": "Storytelling",
@@ -323,7 +323,7 @@ PILLARS = [
     },
     {
         "title": "Reader-first",
-        "body": "Written for the person who has to use the content — integrate the API, make the call, ship the thing — not the person who assigned it.",
+        "body": "Written for the person who has to use the content (integrate the API, make the call, ship the thing), not the person who assigned it.",
     },
 ]
 
@@ -351,7 +351,7 @@ SOCIALS = [
 
 CONTACT_EMAIL = "techwithpraisejames@gmail.com"
 
-# The owner's own figures. Not re-derived, not added to — adjust values here only.
+# The owner's own figures. Not re-derived, not added to. Adjust values here only.
 METRICS = [
     {"value": "125K+", "label": "organic views across 50+ published articles"},
     {"value": "300K+", "label": "impressions across LinkedIn and X in three months"},
