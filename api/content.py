@@ -135,7 +135,7 @@ CASE_STUDIES = [
         "outcome": "Published as Zenrows' reference comparison for large-scale scraping, and ranks in search for \"Apify vs Zenrows\" and related evaluation queries.",
         "demonstrates": "Benchmark design, reproducible testing, cost analysis, and product content grounded in measured results.",
         "quotes": [
-            {"quote": "Incredible as usual.", "name": "Henry", "role": "Content Marketer"},
+            {"quote": "Incredible as usual!", "name": "Henry Bassey", "role": "Editorial reviewer"},
         ],
     },
     {
@@ -150,7 +150,9 @@ CASE_STUDIES = [
         "work": "A long-form architecture guide on Actian's developer blog, structured so a reader can match their own connectivity and data-sovereignty constraints to a pattern.",
         "outcome": "Published on Actian's developer blog, where it ranks number one in search for the \"edge AI architecture\" keyword.",
         "demonstrates": "Synthesis of a fragmented topic into an original, usable framework, and architecture-level technical writing for a specialist engineering audience.",
-        "quotes": [],
+        "quotes": [
+            {"quote": "Great piece as usual, overall.", "name": "Henry Bassey", "role": "Editorial reviewer"},
+        ],
     },
     {
         "slug": "vector-database-market-shifts",
@@ -166,7 +168,13 @@ CASE_STUDIES = [
         "demonstrates": "Technical market research, infrastructure analysis, search-driven content, and the ability to turn several industry developments into a practical decision framework.",
         "resource_url": "https://dev.to/actiandev/whats-changing-in-vector-databases-in-2026-3pbo",
         "resource_label": "Read the article",
-        "quotes": [],
+        "quotes": [
+            {
+                "quote": "The piece is strong, well-structured, and aligns amazingly with the brief.",
+                "name": "Blessing Anyebe",
+                "role": "Editorial reviewer",
+            },
+        ],
     },
     {
         "slug": "cross-functional-impact-research",
