@@ -46,7 +46,7 @@ def detail(slug: str):
         og_type="article",
     )
     deliverables = "".join(f"<li>{d}</li>" for d in s["deliverables"])
-    examples = [w for w in real_work() if w["category"] in s["related_categories"]][:3]
+    examples = [\n        w\n        for category in s["related_categories"]\n        for w in real_work()\n        if w["category"] == category\n    ][:3]
     examples_html = ""
     if examples:
         examples_html = f"""
