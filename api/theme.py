@@ -275,9 +275,6 @@ a.card:hover{text-decoration:none}
 .card p{color:var(--text-dim);font-size:.95rem}
 .card__foot{margin-top:auto;padding-top:var(--sp-3)}
 a.card:hover .card__title{color:var(--accent)}
-.work-card__links{display:flex;flex-wrap:wrap;align-items:center;gap:var(--sp-4)}
-.work-card__service{color:var(--text-dim);font-size:.85rem}
-.work-card__service:hover{color:var(--accent)}
 
 /* ---------- pillars ---------- */
 .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-6)}

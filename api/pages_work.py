@@ -1,6 +1,6 @@
 """/work portfolio index, /work/case-studies index, and case study detail."""
 from components import breadcrumbs, case_study_card, cta_band, esc, work_card
-from content import CASE_STUDIES, CATEGORIES, WORK, find_case_study, find_service, real_work
+from content import CASE_STUDIES, FORMATS, WORK, find_case_study, find_service, real_work
 from seo import PageMeta, article, breadcrumb_list, item_list
 from shell import render_page
 
@@ -27,13 +27,13 @@ FILTER_SCRIPT = """
 (function(){
   var bar=document.querySelector('[data-filter]');
   if(!bar)return;
-  var cards=[].slice.call(document.querySelectorAll('[data-category]'));
+  var cards=[].slice.call(document.querySelectorAll('[data-format]'));
   bar.addEventListener('click',function(e){
     var b=e.target.closest('button');if(!b)return;
     var cat=b.getAttribute('data-cat');
     bar.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b);});
     cards.forEach(function(c){
-      c.classList.toggle('is-hidden', cat!=='all' && c.getAttribute('data-category')!==cat);
+      c.classList.toggle('is-hidden', cat!=='all' && c.getAttribute('data-format')!==cat);
     });
   });
 })();
@@ -43,7 +43,7 @@ FILTER_SCRIPT = """
 
 def index() -> str:
     buttons = '<button data-cat="all" aria-pressed="true">All</button>' + "".join(
-        f'<button data-cat="{esc(c)}" aria-pressed="false">{esc(c)}</button>' for c in CATEGORIES
+        f'<button data-cat="{esc(c)}" aria-pressed="false">{esc(c)}</button>' for c in FORMATS
     )
     cards = "".join(work_card(w) for w in real_work())
     ph = "".join(work_card(w) for w in WORK if w.get("placeholder"))
@@ -54,7 +54,7 @@ def index() -> str:
     <h1>Technical writing you can evaluate.</h1>
     <p class="lede" style="margin-top:var(--sp-5)">Browse benchmarks, tutorials, architecture guides,
     explainers, and industry analysis written for AI and developer audiences.</p>
-    <div class="filter-bar" data-filter role="group" aria-label="Filter work by category"
+    <div class="filter-bar" data-filter role="group" aria-label="Filter work by format"
          style="margin-top:var(--sp-7)">{buttons}</div>
     <div class="grid grid--3">{cards}{ph}</div>
   </div>
