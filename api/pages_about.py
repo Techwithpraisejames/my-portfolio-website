@@ -20,7 +20,7 @@ def render() -> str:
     )
     links = "".join(f'<li><a href="{s["url"]}" rel="noopener">{esc(s["name"])}</a></li>' for s in SOCIALS)
     videos = "".join(
-        f'<iframe src="https://www.youtube.com/embed/{v}" title="Praise James on YouTube" '
+        f'<iframe src="https://www.youtube.com/embed/{v["id"]}" title="{esc(v["title"])}" '
         f'loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>'
         for v in VIDEOS[:4]
     )

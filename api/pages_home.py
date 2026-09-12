@@ -29,7 +29,9 @@ def _hero() -> str:
           <a class="btn btn--ghost" href="/contact">Hire me &rarr;</a>
         </div>
       </div>
-      <img class="hero__photo" src="/media/praise.jpg" width="360" height="360" fetchpriority="high"
+      <img class="hero__photo" src="/media/praise-720.jpg"
+           srcset="/media/praise-320.jpg 320w, /media/praise-720.jpg 720w, /media/praise.jpg 1225w"
+           sizes="(max-width:820px) 220px, 360px" width="360" height="360" fetchpriority="high"
            alt="Praise James, technical writer for AI and developer-focused companies">
     </div>
   </div>

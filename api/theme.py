@@ -275,6 +275,9 @@ a.card:hover{text-decoration:none}
 .card p{color:var(--text-dim);font-size:.95rem}
 .card__foot{margin-top:auto;padding-top:var(--sp-3)}
 a.card:hover .card__title{color:var(--accent)}
+.work-card__links{display:flex;flex-wrap:wrap;align-items:center;gap:var(--sp-4)}
+.work-card__service{color:var(--text-dim);font-size:.85rem}
+.work-card__service:hover{color:var(--accent)}
 
 /* ---------- pillars ---------- */
 .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-6)}
@@ -327,7 +330,10 @@ a.card:hover .card__title{color:var(--accent)}
 .field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:transparent}
 .field textarea{min-height:130px;resize:vertical}
 .field--error input,.field--error textarea{border-color:#e88}
-.field__err{font-size:.8rem;color:#e88}
+.field__err{display:none;font-size:.8rem;color:#e88}
+.field--error .field__err{display:block}
+.form-note--error{color:#e88}
+.hp-field{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 var(--sp-5)}
 @media (max-width:640px){.form-grid{grid-template-columns:1fr}}
 

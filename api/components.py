@@ -98,18 +98,31 @@ def arrow_link(label: str, href: str, external: bool = False) -> str:
     return f'<a class="arrow-link" href="{href}"{rel}>{esc(label)}</a>'
 
 
+_WORK_SERVICE = {
+    "AI/ML": ("Technical articles", "/services/technical-articles"),
+    "Developer Tools": ("Product-led content", "/services/product-led-content"),
+    "Technical Tutorials": ("Developer tutorials", "/services/developer-tutorials"),
+    "Product Content": ("Product-led content", "/services/product-led-content"),
+    "Thought Leadership": ("Thought leadership", "/services/technical-thought-leadership"),
+}
+
+
 def work_card(item: dict) -> str:
     if item.get("placeholder"):
         return f'<div class="card placeholder">{esc(item["title"])}. {esc(item["summary"])}</div>'
     meta = esc(item["publication"])
+    service_label, service_url = _WORK_SERVICE[item["category"]]
     return f"""
-<a class="card" href="{item['url']}" rel="noopener" data-category="{esc(item['category'])}">
+<article class="card work-card" data-category="{esc(item['category'])}">
   <span class="card__kicker">{esc(item['category'])}</span>
-  <span class="card__title">{esc(item['title'])}</span>
+  <a class="card__title" href="{item['url']}" rel="noopener">{esc(item['title'])}</a>
   <span class="card__meta">{meta}</span>
   <p>{esc(item['summary'])}</p>
-  <span class="card__foot"><span class="arrow-link">Read</span></span>
-</a>
+  <span class="card__foot work-card__links">
+    {arrow_link("Read article", item['url'], external=True)}
+    <a class="work-card__service" href="{service_url}">{esc(service_label)}</a>
+  </span>
+</article>
 """.strip()
 
 

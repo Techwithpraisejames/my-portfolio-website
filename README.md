@@ -44,6 +44,15 @@ pip install -r requirements.txt
 python -m flask --app api/index.py run --port 5000
 ```
 
+## Contact form delivery
+
+The contact form sends inquiries through Resend. Configure these server-side environment variables in Vercel:
+
+- `RESEND_API_KEY`: API key from the Vercel Resend integration.
+- `RESEND_FROM_EMAIL`: verified sender, for example `Portfolio <hello@yourdomain.com>`.
+
+The recipient is set by `CONTACT_EMAIL` in `api/content.py`. The Email directly link remains available as a fallback.
+
 ## Links
 
 - [YouTube](https://www.youtube.com/channel/UCwVDq2mG2FuNCRzAf-ypLvg)

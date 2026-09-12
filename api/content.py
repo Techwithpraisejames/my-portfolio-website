@@ -368,7 +368,13 @@ PROCESS = [
 
 # ------------------------------------------------------------------ media / social
 
-VIDEOS = ["NiWYwSMqETk", "iW7VrXRgg0A", "Z0yx9Pt7-rQ", "I8-74gSKQ80", "84oDAPn7kls"]
+VIDEOS = [
+    {"id": "NiWYwSMqETk", "title": "Run LLMs Locally with Docker Model Runner"},
+    {"id": "iW7VrXRgg0A", "title": "What Is a Decision Tree in Machine Learning?"},
+    {"id": "Z0yx9Pt7-rQ", "title": "Build an AI Agent with Airtop"},
+    {"id": "I8-74gSKQ80", "title": "20 AI Terms You Need to Understand"},
+    {"id": "84oDAPn7kls", "title": "Run LLMs Locally with Ollama"},
+]
 YOUTUBE_CHANNEL = "https://www.youtube.com/channel/UCwVDq2mG2FuNCRzAf-ypLvg"
 
 SOCIALS = [
