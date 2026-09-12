@@ -361,7 +361,7 @@ PROCESS = [
 
 # ------------------------------------------------------------------ media / social
 
-VIDEOS = ["NiWYwSMqETk", "iW7VrXRgg0A", "Z0yx9Pt7-rQ", "x-PyeOhqXi0", "84oDAPn7kls"]
+VIDEOS = ["NiWYwSMqETk", "iW7VrXRgg0A", "Z0yx9Pt7-rQ", "I8-74gSKQ80", "84oDAPn7kls"]
 YOUTUBE_CHANNEL = "https://www.youtube.com/channel/UCwVDq2mG2FuNCRzAf-ypLvg"
 
 SOCIALS = [
