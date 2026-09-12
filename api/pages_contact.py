@@ -68,9 +68,9 @@ def render() -> str:
 <section class="section">
   <div class="container" style="max-width:720px">
     <span class="eyebrow">Hire me</span>
-    <h1>Have a technical story that needs telling?</h1>
-    <p class="lede" style="margin-top:var(--sp-5)">Tell me what you're building, what you need help
-    with, and where you're trying to take the content.</p>
+    <h1>Tell me what you need written.</h1>
+    <p class="lede" style="margin-top:var(--sp-5)">Share the product, audience, deliverable, and
+    timeline. I'll review the brief and reply with the next steps.</p>
 
     <form id="project-form" style="margin-top:var(--sp-8)" novalidate>
       <div class="form-grid">

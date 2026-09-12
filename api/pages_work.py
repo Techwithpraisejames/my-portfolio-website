@@ -51,9 +51,9 @@ def index() -> str:
 <section class="section">
   <div class="container">
     <span class="eyebrow">Work</span>
-    <h1>Published work, selected for what it shows.</h1>
-    <p class="lede" style="margin-top:var(--sp-5)">Benchmarks, tutorials, explainers, and analysis for
-    AI and developer audiences. Filter by focus area.</p>
+    <h1>Technical writing you can evaluate.</h1>
+    <p class="lede" style="margin-top:var(--sp-5)">Browse benchmarks, tutorials, architecture guides,
+    explainers, and industry analysis written for AI and developer audiences.</p>
     <div class="filter-bar" data-filter role="group" aria-label="Filter work by category"
          style="margin-top:var(--sp-7)">{buttons}</div>
     <div class="grid grid--3">{cards}{ph}</div>
@@ -79,9 +79,9 @@ def case_studies_index() -> str:
 <section class="section">
   <div class="container">
     <span class="eyebrow">Case studies</span>
-    <h1>The work behind the work.</h1>
-    <p class="lede" style="margin-top:var(--sp-5)">Each case study covers the brief, the technical
-    challenge, the approach, what was produced, and the outcome.</p>
+    <h1>See how I approach the brief.</h1>
+    <p class="lede" style="margin-top:var(--sp-5)">Each case study covers the research, editorial
+    decisions, finished work, and results behind a published project.</p>
     <div class="grid grid--3" style="margin-top:var(--sp-7)">{cards}</div>
   </div>
 </section>

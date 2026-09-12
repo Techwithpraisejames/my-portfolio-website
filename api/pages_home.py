@@ -7,11 +7,10 @@ from seo import PageMeta, person, website
 from shell import render_page
 
 META = PageMeta(
-    title="Praise James | AI Technical Writer & Content Strategist",
+    title="Praise James | AI and Developer Tools Technical Writer",
     description=(
-        "Praise James is an AI technical writer and content strategist creating technical "
-        "articles, developer tutorials, product-led content, and thought leadership for AI "
-        "and technology companies."
+        "Praise James writes developer tutorials, technical articles, benchmarks, and thought "
+        "leadership for AI, machine learning, and developer tool companies."
     ),
     path="/",
 )
@@ -23,13 +22,13 @@ def _hero() -> str:
   <div class="container">
     <div class="hero__grid">
       <div>
-        <h1 class="hero__title hero__reveal">Technical content for AI and developer-focused companies.</h1>
-        <p class="hero__sub hero__reveal">I turn complex technologies into clear, technically grounded content that helps developers understand products, solve problems, and make better technical decisions.</p>
+        <h1 class="hero__title hero__reveal">Technical writer for AI and developer tool companies.</h1>
+        <p class="hero__sub hero__reveal">I write benchmarks, developer tutorials, architecture guides, and technical analysis for companies building products developers need to understand and use.</p>
         <div class="btn-row hero__reveal">
           <a class="btn btn--accent" href="/work">See my work &rarr;</a>
           <a class="btn btn--ghost" href="/contact">Hire me &rarr;</a>
         </div>
-        <p class="hero__cred hero__reveal">Technical writer &middot; AI/ML &middot; Developer tools &middot; Technical storytelling</p>
+        <p class="hero__cred hero__reveal">Published for Actian, Bright Data, Zenrows, and ToolJet.</p>
       </div>
       <img class="hero__photo" src="/media/praise.jpg" width="360" height="360" fetchpriority="high"
            alt="Praise James, technical writer for AI and developer-focused companies">
@@ -58,8 +57,8 @@ def _services() -> str:
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Services</span>
-      <h2>Complex technology needs clear communication.</h2>
-      <p>Four ways I help AI and developer-focused companies explain what they are building.</p>
+      <h2>Technical content backed by research and hands-on testing.</h2>
+      <p>I help AI and developer tool companies publish articles that developers can learn from, follow, and use to make technical decisions.</p>
     </div>
     <div class="grid grid--4">{cards}</div>
   </div>
@@ -74,8 +73,8 @@ def _selected_work() -> str:
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Selected work</span>
-      <h2>Published work you can evaluate.</h2>
-      <p>Benchmarks, tutorials, and analysis written for technical readers and their teams.</p>
+      <h2>Read the work and judge for yourself.</h2>
+      <p>My portfolio includes original benchmarks, developer tutorials, AI architecture guides, and analysis published by technical companies and developer publications.</p>
     </div>
     <div class="grid grid--2">{cards}</div>
     <p style="margin-top:var(--sp-6)">{arrow_link("See the full portfolio", "/work")}</p>
@@ -93,7 +92,7 @@ def _why() -> str:
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Why Praise</span>
-      <h2>Technical enough to understand it. Writer enough to make people care.</h2>
+      <h2>I do the work behind the writing.</h2>
     </div>
     <div class="pillars">{pillars}</div>
   </div>
@@ -118,8 +117,8 @@ def _case_studies() -> str:
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Case studies</span>
-      <h2>How the work gets done.</h2>
-      <p>The brief, the technical challenge, the approach, and what happened next.</p>
+      <h2>See how I approach the brief.</h2>
+      <p>Each case study covers the research, editorial decisions, finished work, and results behind a published project.</p>
     </div>
     <div class="grid grid--3">{cards}</div>
     <p style="margin-top:var(--sp-6)">{arrow_link("All case studies", "/work/case-studies")}</p>
@@ -137,8 +136,7 @@ def _process() -> str:
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Process</span>
-      <h2>Understand, research, structure, write, refine.</h2>
-      <p>A practical sequence that keeps the content accurate and the timeline predictable.</p>
+      <h2>How I work</h2>
     </div>
     <div class="process">{steps}</div>
   </div>
@@ -152,12 +150,10 @@ def _about_teaser() -> str:
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">About</span>
-      <h2>I write about technology for a living.</h2>
+      <h2>I trace ideas back to the source.</h2>
     </div>
     <div class="stack" style="max-width:60ch">
-      <p>I came into technical writing from writing, and into AI and developer tools from a background in
-      mathematics and hands-on machine learning. Long enough in to know the hardest part is not
-      understanding the technology. It is knowing what your reader actually needs to walk away with.</p>
+      <p>My background in mathematics taught me to follow an argument until every step holds. That habit now shapes how I write about AI, machine learning, developer tools, and the systems built around them.</p>
       <p>{arrow_link("More about how I work", "/about")}</p>
     </div>
   </div>
@@ -172,8 +168,8 @@ def _insights() -> str:
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Insights</span>
-      <h2>Writing about technical content.</h2>
-      <p>Frameworks and lessons from <em>Tech &amp; Storytelling</em>, my newsletter on the craft.</p>
+      <h2>Notes from the work of writing technical content.</h2>
+      <p>Frameworks and editorial lessons from <em>Tech &amp; Storytelling</em>.</p>
     </div>
     <div class="grid grid--3">{cards}</div>
     <p style="margin-top:var(--sp-6)">{arrow_link("Read more insights", "/insights")}</p>
@@ -188,7 +184,7 @@ def _newsletter() -> str:
   <div class="container">
     <div class="section-head" style="margin-bottom:var(--sp-5)">
       <span class="eyebrow">Newsletter</span>
-      <h2>I write about making technical content easier to understand.</h2>
+      <h2>Technical writing lessons from published work.</h2>
       <p>{NEWSLETTER["pitch"]}</p>
     </div>
     <a class="btn btn--ghost" href="{NEWSLETTER['url']}" rel="noopener">Subscribe &rarr;</a>
@@ -202,7 +198,7 @@ def render() -> str:
         _hero(), _proof(), _services(), _selected_work(), _why(), _case_studies(),
         _process(), _about_teaser(), _insights(), _newsletter(),
         cta_band(
-            "Need technical content for your AI product?",
+            "Need technical content for your product?",
             "Let's work together →", "/contact",
         ),
     ])

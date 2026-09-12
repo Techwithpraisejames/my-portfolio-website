@@ -20,14 +20,12 @@ def overview() -> str:
 <section class="section">
   <div class="container">
     <span class="eyebrow">Services</span>
-    <h1>Technical content built for complex products.</h1>
-    <p class="lede" style="margin-top:var(--sp-5)">I help AI and developer-focused companies explain
-    what they are building, educate their audience, and build technical authority. Every engagement
-    runs on the same principles: technical depth, a structure the reader can follow, and content
-    written for the person who has to use it.</p>
+    <h1>Technical content backed by research and hands-on testing.</h1>
+    <p class="lede" style="margin-top:var(--sp-5)">I help AI and developer tool companies publish
+    articles that developers can learn from, follow, and use to make technical decisions.</p>
     <div class="grid grid--4" style="margin-top:var(--sp-8)">{"".join(service_card(s) for s in SERVICES)}</div>
-    <p style="margin-top:var(--sp-7)" class="muted">Not sure which fits? <a href="/contact">Describe the
-    project</a> and I'll tell you.</p>
+    <p style="margin-top:var(--sp-7)" class="muted"><a href="/contact">Describe your project</a> and
+    I'll recommend the right format.</p>
   </div>
 </section>
 {cta_band("Have a project in mind?", "Start a project →", "/contact")}

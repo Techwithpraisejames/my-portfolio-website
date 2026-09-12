@@ -20,10 +20,9 @@ def render() -> str:
 <section class="section">
   <div class="container">
     <span class="eyebrow">Insights</span>
-    <h1>Writing about how technical content gets made.</h1>
-    <p class="lede" style="margin-top:var(--sp-5)">I publish <em>{esc(NEWSLETTER['name'])}</em>, a
-    newsletter on the craft of technical writing: frameworks, structure, and the decisions that
-    make a piece land. {esc(NEWSLETTER['pitch'])}</p>
+    <h1>Notes from the work of writing technical content.</h1>
+    <p class="lede" style="margin-top:var(--sp-5)"><em>{esc(NEWSLETTER['name'])}</em> is where I share
+    the frameworks, editorial decisions, and lessons shaping my work as a technical writer.</p>
     <div class="grid grid--3" style="margin-top:var(--sp-7)">{cards}
       <div class="card placeholder">[ADD ARTICLE]</div>
     </div>
@@ -32,7 +31,7 @@ def render() -> str:
 <section class="section">
   <div class="container">
     <span class="eyebrow">Newsletter</span>
-    <h2>I write about making technical content easier to understand.</h2>
+    <h2>Technical writing lessons from published work.</h2>
     <p class="lede" style="margin-top:var(--sp-4)">A newsletter for technical writers who want to
     become better storytellers.</p>
     <p style="margin-top:var(--sp-5)">
@@ -40,7 +39,7 @@ def render() -> str:
     </p>
   </div>
 </section>
-{cta_band("Need a writer who thinks about this?", "Discuss your project →", "/contact")}
+{cta_band("Need a technical writer?", "Discuss your project →", "/contact")}
 """
     trail = [("Home", "/"), ("Insights", "/insights")]
     ld = [

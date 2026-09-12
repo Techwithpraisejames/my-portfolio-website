@@ -80,10 +80,10 @@ def person() -> dict:
         "name": "Praise James",
         "url": SITE_URL + "/about",
         "image": OG_IMAGE,
-        "jobTitle": "Technical Writer & Content Strategist",
+        "jobTitle": "AI and Developer Tools Technical Writer",
         "description": (
-            "Technical writer for AI and developer-focused companies. Turns complex "
-            "technologies into clear, technically grounded content."
+            "Technical writer covering AI, machine learning, developer tools, and software "
+            "infrastructure for technical companies."
         ),
         "knowsAbout": [
             "Technical writing", "Artificial intelligence", "Machine learning",

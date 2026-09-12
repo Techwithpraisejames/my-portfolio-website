@@ -58,7 +58,7 @@ def footer() -> str:
     <div class="site-footer__grid">
       <div>
         <div class="site-footer__brand">Praise James</div>
-        <p class="site-footer__tag">Technical content for AI and developer-focused companies.</p>
+        <p class="site-footer__tag">Technical writer for AI and developer tool companies.</p>
       </div>
       <nav aria-label="Footer">{pages}</nav>
       <nav aria-label="Elsewhere">{social}</nav>
