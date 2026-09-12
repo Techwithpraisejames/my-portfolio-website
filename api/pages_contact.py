@@ -33,7 +33,7 @@ FORM_SCRIPT = f"""
     }});
     if(!ok)return;
     var lines=[
-      'Name: '+name,'Work email: '+email,
+      'Name: '+name,'Email: '+email,
       'Company: '+g('company'),'Website: '+g('website'),
       'What they need: '+g('need'),'Timeline: '+g('timeline'),
       'Budget range: '+g('budget'),'',
@@ -75,7 +75,7 @@ def render() -> str:
     <form id="project-form" style="margin-top:var(--sp-8)" novalidate>
       <div class="form-grid">
         {_field("Name", "name", required=True)}
-        {_field("Work email", "email", type_="email", required=True)}
+        {_field("Email", "email", type_="email", required=True)}
         {_field("Company", "company")}
         {_field("Website", "website", type_="url", placeholder="https://")}
       </div>
