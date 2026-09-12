@@ -214,7 +214,6 @@ img{max-width:100%;height:auto;display:block}
 .hero__grid{display:grid;grid-template-columns:1.35fr .9fr;gap:clamp(32px,6vw,72px);align-items:center}
 .hero__title{margin-bottom:var(--sp-5)}
 .hero__sub{font-size:var(--step-1);color:var(--text-dim);max-width:52ch;margin-bottom:var(--sp-6);line-height:1.55}
-.hero__cred{margin-top:var(--sp-6);font-size:var(--step--1);color:var(--text-dim);letter-spacing:.01em}
 .hero__photo{
   width:100%;max-width:360px;aspect-ratio:1/1;object-fit:cover;object-position:center top;
   border-radius:var(--radius-card);border:1px solid var(--hairline);
@@ -228,16 +227,18 @@ img{max-width:100%;height:auto;display:block}
   @keyframes heroIn{to{opacity:1;transform:none}}
 }
 @media (max-width:820px){
+  .hero{padding-block:40px}
   .hero__grid{grid-template-columns:1fr;gap:var(--sp-6)}
   .hero__photo{order:-1;justify-self:start;max-width:220px}
 }
 
 /* ---------- proof strip ---------- */
-.proof{padding-block:var(--sp-7)}
+.proof{padding-block:var(--sp-6)}
 .proof p{max-width:none}
 .proof__label{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-dim);margin-bottom:var(--sp-3)}
 .proof__names{font-family:"Fraunces",Georgia,serif;font-size:var(--step-1);color:var(--text);line-height:1.5}
 .proof__pubs{margin-top:var(--sp-3);color:var(--text-dim);font-size:var(--step--1)}
+@media (max-width:820px){.proof{padding-block:var(--sp-5)}}
 
 /* ---------- generic grid of cards ---------- */
 .grid{display:grid;gap:var(--sp-5)}

@@ -28,7 +28,6 @@ def _hero() -> str:
           <a class="btn btn--accent" href="/work">See my work &rarr;</a>
           <a class="btn btn--ghost" href="/contact">Hire me &rarr;</a>
         </div>
-        <p class="hero__cred hero__reveal">Published for Actian, Bright Data, Zenrows, and ToolJet.</p>
       </div>
       <img class="hero__photo" src="/media/praise.jpg" width="360" height="360" fetchpriority="high"
            alt="Praise James, technical writer for AI and developer-focused companies">
