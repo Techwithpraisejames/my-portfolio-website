@@ -123,33 +123,6 @@ WORK = [
 
 CASE_STUDIES = [
     {
-        "slug": "cross-functional-impact-research",
-        "title": "What Senior Technical Writers Know About Cross-Functional Impact",
-        "client": "Independent community research project",
-        "service": "technical-thought-leadership",
-        "summary": "Research based on interviews with nine senior technical writers about their work across product, engineering, support, and internal communication.",
-        "brief": "The project set out to document how senior technical writers contribute across teams and how they describe that contribution to the people who manage them.",
-        "challenge": "The value of the role is often spread across product decisions, support, engineering, and internal communication, which makes it difficult to describe with a single metric or job description.",
-        "approach": "Interviewed nine senior technical writers, including practitioners from companies such as Google and Mastercard. Coded the interviews for recurring themes and used those themes to build the final narrative.",
-        "work": "A long-form resource built around the interview findings, published and distributed to the technical writing community.",
-        "outcome": "The resource sparked sustained discussion among senior practitioners on LinkedIn, reached around 700 technical writers, and shifted how several of them framed the value of the role inside their own organizations.",
-        "demonstrates": "Original research design, expert interviews, thematic analysis, and an argument built from primary sources.",
-        "resource_url": "https://drive.usercontent.google.com/u/2/uc?id=1186xYxB2RtNuwsPwWPBzavyCLjBQ79tI&export=download",
-        "resource_label": "Read the resource",
-        "quotes": [
-            {
-                "quote": "It should be required reading for anyone who still thinks technical writing is just a finishing step. The value is invisible by design and this makes it visible.",
-                "name": "Adrian Ashley",
-                "role": "Senior Technical Writer",
-            },
-            {
-                "quote": "This made the invisible value of technical writers visible.",
-                "name": "Kelley Bennett",
-                "role": "Senior Technical Writer",
-            },
-        ],
-    },
-    {
         "slug": "zenrows-large-scale-scraping-benchmark",
         "title": "A Reproducible Benchmark for Large-Scale Web Scraping",
         "client": "Zenrows",
@@ -178,6 +151,49 @@ CASE_STUDIES = [
         "outcome": "Published on Actian's developer blog, where it ranks number one in search for the \"edge AI architecture\" keyword.",
         "demonstrates": "Synthesis of a fragmented topic into an original, usable framework, and architecture-level technical writing for a specialist engineering audience.",
         "quotes": [],
+    },
+    {
+        "slug": "vector-database-market-shifts",
+        "title": "Turning Vector Database Market Shifts Into an Architecture Decision Framework",
+        "client": "Actian",
+        "service": "technical-thought-leadership",
+        "summary": "A research-backed analysis of the forces reshaping vector databases and what they mean for infrastructure decisions in 2026.",
+        "brief": "Actian needed an article that explained how the vector database market was changing and what those changes meant for teams building AI applications.",
+        "challenge": "The topic covered several connected shifts, including database consolidation, agent-driven query volume, infrastructure costs, and the limited support for edge deployments. The article needed to connect these developments without becoming a news roundup or a list of vendor claims.",
+        "approach": "Researched market acquisitions, database benchmarks, pricing models, deployment constraints, and emerging workload patterns. Organized the findings around three market forces, compared purpose-built vector databases with PostgreSQL and pgvector, and created a decision framework based on scale, performance, cost, and deployment requirements.",
+        "work": "A long-form analysis published on Actian's developer blog, covering the move toward relational databases, the effect of AI agents on database workloads, and the remaining gap in edge and offline vector infrastructure.",
+        "outcome": "The article ranks on Google's first page for \"vector database news 2026,\" and Claude is its second-highest traffic source.",
+        "demonstrates": "Technical market research, infrastructure analysis, search-driven content, and the ability to turn several industry developments into a practical decision framework.",
+        "resource_url": "https://dev.to/actiandev/whats-changing-in-vector-databases-in-2026-3pbo",
+        "resource_label": "Read the article",
+        "quotes": [],
+    },
+    {
+        "slug": "cross-functional-impact-research",
+        "title": "What Senior Technical Writers Know About Cross-Functional Impact",
+        "client": "Independent community research project",
+        "service": "technical-thought-leadership",
+        "summary": "Research based on interviews with nine senior technical writers about their work across product, engineering, support, and internal communication.",
+        "brief": "The project set out to document how senior technical writers contribute across teams and how they describe that contribution to the people who manage them.",
+        "challenge": "The value of the role is often spread across product decisions, support, engineering, and internal communication, which makes it difficult to describe with a single metric or job description.",
+        "approach": "Interviewed nine senior technical writers, including practitioners from companies such as Google and Mastercard. Coded the interviews for recurring themes and used those themes to build the final narrative.",
+        "work": "A long-form resource built around the interview findings, published and distributed to the technical writing community.",
+        "outcome": "The resource sparked sustained discussion among senior practitioners on LinkedIn, reached around 700 technical writers, and shifted how several of them framed the value of the role inside their own organizations.",
+        "demonstrates": "Original research design, expert interviews, thematic analysis, and an argument built from primary sources.",
+        "resource_url": "https://drive.usercontent.google.com/u/2/uc?id=1186xYxB2RtNuwsPwWPBzavyCLjBQ79tI&export=download",
+        "resource_label": "Read the resource",
+        "quotes": [
+            {
+                "quote": "It should be required reading for anyone who still thinks technical writing is just a finishing step. The value is invisible by design and this makes it visible.",
+                "name": "Adrian Ashley",
+                "role": "Senior Technical Writer",
+            },
+            {
+                "quote": "This made the invisible value of technical writers visible.",
+                "name": "Kelley Bennett",
+                "role": "Senior Technical Writer",
+            },
+        ],
     },
 ]
 
