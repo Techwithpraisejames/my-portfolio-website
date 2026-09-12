@@ -135,7 +135,7 @@ CASE_STUDIES = [
         "outcome": "Published as Zenrows' reference comparison for large-scale scraping, and ranks in search for \"Apify vs Zenrows\" and related evaluation queries.",
         "demonstrates": "Benchmark design, reproducible testing, cost analysis, and product content grounded in measured results.",
         "quotes": [
-            {"quote": "Incredible as usual!", "name": "Henry Bassey", "role": "Editorial reviewer"},
+            {"quote": "Incredible as usual!", "name": "Henry Bassey", "role": "Head of Content at Hackmamba"},
         ],
     },
     {
@@ -151,7 +151,7 @@ CASE_STUDIES = [
         "outcome": "Published on Actian's developer blog, where it ranks number one in search for the \"edge AI architecture\" keyword.",
         "demonstrates": "Synthesis of a fragmented topic into an original, usable framework, and architecture-level technical writing for a specialist engineering audience.",
         "quotes": [
-            {"quote": "Great piece as usual, overall.", "name": "Henry Bassey", "role": "Editorial reviewer"},
+            {"quote": "Great piece as usual, overall.", "name": "Henry Bassey", "role": "Head of Content at Hackmamba"},
         ],
     },
     {
@@ -172,7 +172,7 @@ CASE_STUDIES = [
             {
                 "quote": "The piece is strong, well-structured, and aligns amazingly with the brief.",
                 "name": "Blessing Anyebe",
-                "role": "Editorial reviewer",
+                "role": "Head of Operations at Hackmamba",
             },
         ],
     },
