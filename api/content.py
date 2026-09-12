@@ -322,6 +322,13 @@ INSIGHTS = [
         "date": "[ADD DATE]",
         "summary": "A repeatable way to write definition articles that do not read like a glossary.",
     },
+    {
+        "title": "How to Write Thought Leadership Content",
+        "url": "https://techwithpraisejames.substack.com/p/how-to-write-thought-leadership-content",
+        "category": "Craft",
+        "date": "[ADD DATE]",
+        "summary": "Lessons from building technical arguments through research, evidence, and published work.",
+    },
 ]
 
 # ------------------------------------------------------------------ testimonials

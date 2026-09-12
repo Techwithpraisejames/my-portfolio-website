@@ -23,9 +23,7 @@ def render() -> str:
     <h1>Notes from the work of writing technical content.</h1>
     <p class="lede" style="margin-top:var(--sp-5)"><em>{esc(NEWSLETTER['name'])}</em> is where I share
     the frameworks, editorial decisions, and lessons shaping my work as a technical writer.</p>
-    <div class="grid grid--3" style="margin-top:var(--sp-7)">{cards}
-      <div class="card placeholder">[ADD ARTICLE]</div>
-    </div>
+    <div class="grid grid--3" style="margin-top:var(--sp-7)">{cards}</div>
   </div>
 </section>
 <section class="section">
