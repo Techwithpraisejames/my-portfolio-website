@@ -379,7 +379,7 @@ CONTACT_EMAIL = "techwithpraisejames@gmail.com"
 METRICS = [
     {"value": "125K+", "label": "organic views across 50+ published articles"},
     {"value": "300K+", "label": "impressions across LinkedIn and X in three months"},
-    {"value": "500", "label": "newsletter subscribers in the first month"},
+    {"value": "500", "label": "developer subscribers in the first month of The Mamba Brief, where I serve as editorial lead"},
 ]
 
 PROJECT_TYPES = [

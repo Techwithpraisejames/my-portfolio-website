@@ -335,6 +335,7 @@ a.card:hover .card__title{color:var(--accent)}
 
 /* ---------- links list ---------- */
 .link-list{list-style:none;display:flex;flex-wrap:wrap;gap:var(--sp-4)}
+.prose .link-list li + li{margin-top:0}
 .link-list a{color:var(--text-dim);font-size:.95rem}
 .link-list a:hover{color:var(--accent)}
 
