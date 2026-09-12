@@ -4,6 +4,7 @@ import html
 
 NAV_LINKS = [
     ("Work", "/work"),
+    ("Case studies", "/work/case-studies"),
     ("Services", "/services"),
     ("About", "/about"),
     ("Insights", "/insights"),
@@ -21,8 +22,13 @@ def _current(path: str, href: str) -> bool:
 
 
 def nav(path: str) -> str:
+    current_href = max(
+        (href for _, href in NAV_LINKS if _current(path, href)),
+        key=len,
+        default="",
+    )
     links = "".join(
-        f'<li><a href="{href}"{" aria-current=\"page\"" if _current(path, href) else ""}>{esc(label)}</a></li>'
+        f'<li><a href="{href}"{" aria-current=\"page\"" if href == current_href else ""}>{esc(label)}</a></li>'
         for label, href in NAV_LINKS
     )
     return f"""
@@ -46,22 +52,28 @@ def nav(path: str) -> str:
 def footer() -> str:
     from content import SOCIALS
     social = "".join(
-        f'<a href="{s["url"]}" rel="noopener">{esc(s["name"])}</a>' for s in SOCIALS
+        f'<li><a href="{s["url"]}" rel="noopener">{esc(s["name"])}</a></li>' for s in SOCIALS
     )
     pages = "".join(
-        f'<a href="{href}">{esc(label)}</a>'
+        f'<li><a href="{href}">{esc(label)}</a></li>'
         for label, href in NAV_LINKS + [("Contact", "/contact")]
     )
     return f"""
 <footer class="site-footer">
   <div class="container">
     <div class="site-footer__grid">
-      <div>
+      <div class="site-footer__intro">
         <div class="site-footer__brand">Praise James</div>
         <p class="site-footer__tag">Technical writer for AI and developer tool companies.</p>
       </div>
-      <nav aria-label="Footer">{pages}</nav>
-      <nav aria-label="Elsewhere">{social}</nav>
+      <nav class="site-footer__group" aria-labelledby="footer-explore">
+        <h2 class="site-footer__heading" id="footer-explore">Explore</h2>
+        <ul class="site-footer__links">{pages}</ul>
+      </nav>
+      <nav class="site-footer__group" aria-labelledby="footer-elsewhere">
+        <h2 class="site-footer__heading" id="footer-elsewhere">Elsewhere</h2>
+        <ul class="site-footer__links">{social}</ul>
+      </nav>
     </div>
     <p class="site-footer__legal">&copy; 2026 Praise James. Technical writer &middot; AI/ML &middot; Developer tools.</p>
   </div>
@@ -158,13 +170,22 @@ NAV_SCRIPT = """
 (function(){
   var t=document.querySelector('[data-nav-toggle]'),m=document.getElementById('nav-menu');
   if(!t||!m)return;
+  var close=function(returnFocus){
+    m.classList.remove('is-open');
+    t.setAttribute('aria-expanded','false');
+    t.setAttribute('aria-label','Open menu');
+    document.body.style.overflow='';
+    if(returnFocus)t.focus();
+  };
   t.addEventListener('click',function(){
     var open=m.classList.toggle('is-open');
     t.setAttribute('aria-expanded',open);
     t.setAttribute('aria-label',open?'Close menu':'Open menu');
     document.body.style.overflow=open?'hidden':'';
+    if(open){var first=m.querySelector('a');if(first)first.focus();}
   });
-  m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('is-open');t.setAttribute('aria-expanded','false');document.body.style.overflow='';}});
+  m.addEventListener('click',function(e){if(e.target.tagName==='A')close(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('is-open'))close(true);});
 })();
 </script>
 """.strip()
