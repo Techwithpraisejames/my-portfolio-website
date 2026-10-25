@@ -23,7 +23,7 @@ def _hero() -> str:
     <div class="hero__grid">
       <div>
         <h1 class="hero__title hero__reveal">Technical writer for AI and developer tool companies.</h1>
-        <p class="hero__sub hero__reveal">I trace technical ideas to the source, find the argument, and turn it into content developers can follow.</p>
+        <p class="hero__sub hero__reveal">I trace technical ideas to the source, shape them into clear content, and help that work reach developers through organic distribution.</p>
         <div class="btn-row hero__reveal">
           <a class="btn btn--accent" href="/work">See my work &rarr;</a>
           <a class="btn btn--ghost" href="/contact">Hire me &rarr;</a>
@@ -59,9 +59,9 @@ def _services() -> str:
     <div class="section-head">
       <span class="eyebrow">Services</span>
       <h2>Technical content backed by research and hands-on testing.</h2>
-      <p>I help AI and developer tool companies publish articles that developers can learn from, follow, and use to make technical decisions.</p>
+      <p>I help AI and developer tool companies create technical content and distribute it where developers already spend time.</p>
     </div>
-    <div class="grid grid--4">{cards}</div>
+    <div class="services-grid">{cards}</div>
   </div>
 </section>
 """.strip()

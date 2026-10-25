@@ -8,8 +8,8 @@ from shell import render_page
 OVERVIEW_META = PageMeta(
     title="Services | Technical content for AI and developer companies | Praise James",
     description=(
-        "Technical articles, developer tutorials, product-led content, and technical thought "
-        "leadership for AI and developer-focused companies."
+        "Technical articles, developer tutorials, product-led content, thought leadership, and "
+        "content distribution for AI and developer-focused companies."
     ),
     path="/services",
 )
@@ -22,8 +22,8 @@ def overview() -> str:
     <span class="eyebrow">Services</span>
     <h1>Technical content backed by research and hands-on testing.</h1>
     <p class="lede" style="margin-top:var(--sp-5)">I help AI and developer tool companies publish
-    articles that developers can learn from, follow, and use to make technical decisions.</p>
-    <div class="grid grid--4" style="margin-top:var(--sp-8)">{"".join(service_card(s) for s in SERVICES)}</div>
+    technical content and distribute it where developers already spend time.</p>
+    <div class="services-grid" style="margin-top:var(--sp-8)">{"".join(service_card(s) for s in SERVICES)}</div>
     <p style="margin-top:var(--sp-7)" class="muted"><a href="/contact">Describe your project</a> and
     I'll recommend the right format.</p>
   </div>
@@ -52,6 +52,11 @@ def detail(slug: str):
         examples_html = f"""
     <h2>Relevant work</h2>
     <div class="grid grid--3">{"".join(work_card(w) for w in examples)}</div>"""
+    proof_html = ""
+    if s.get("proof"):
+        proof_html = f"""
+    <h2>Selected result</h2>
+    <p>{s['proof']}</p>"""
     body = f"""
 <section class="section">
   <div class="container prose" style="max-width:760px">
@@ -69,6 +74,7 @@ def detail(slug: str):
 
     <h2>How I approach it</h2>
     <p>{s['approach']}</p>
+    {proof_html}
     {examples_html}
 
     <p style="margin-top:var(--sp-8)">

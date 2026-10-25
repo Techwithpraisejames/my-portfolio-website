@@ -253,10 +253,12 @@ img{max-width:100%;height:auto;display:block}
 .grid--2{grid-template-columns:repeat(2,1fr)}
 .grid--3{grid-template-columns:repeat(2,1fr)}
 .grid--4{grid-template-columns:repeat(2,1fr)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-5)}
 @media (min-width:1000px){.grid--3{grid-template-columns:repeat(3,1fr)}}
 @media (min-width:900px){.grid--4{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:620px){
-  .grid--2,.grid--3,.grid--4{grid-template-columns:1fr}
+  .grid--2,.grid--3,.grid--4,.services-grid{grid-template-columns:1fr}
 }
 
 .card{

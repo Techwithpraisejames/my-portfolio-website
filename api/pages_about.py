@@ -43,8 +43,8 @@ def render() -> str:
     <h2>How I work</h2>
     <p>I read the source material, test the product, and check each claim before I write. The method changes with the assignment, but the standard stays the same.</p>
 
-    <h2>What I write</h2>
-    <p>My work includes developer tutorials, architecture guides, technical comparisons, industry analysis, and thought leadership. I have written for companies including Actian, Bright Data, Zenrows, and ToolJet.</p>
+    <h2>What I do</h2>
+    <p>I write developer tutorials, architecture guides, technical comparisons, industry analysis, and thought leadership. I also distribute technical content across developer communities and social platforms.</p>
 
     <h2>Beyond client work</h2>
     <p>I publish Tech &amp; Storytelling for technical writers, make AI videos for beginners, and speak about research, editing, and technical storytelling.</p>
@@ -60,7 +60,7 @@ def render() -> str:
       <figure>
         <img src="/media/workshop-speaking.jpg" width="1200" height="588" loading="lazy"
              alt="Praise James teaching an editing session with a microphone">
-        <figcaption>Teaching writers to ask “so what?” of every fact.</figcaption>
+        <figcaption>Teaching writers to ask “so what?” of every fact at the Technical Writing Mentorship Program (TWMP) Meetup 1.0.</figcaption>
       </figure>
     </div>
   </div>

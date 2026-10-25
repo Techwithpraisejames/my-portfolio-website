@@ -27,6 +27,7 @@ SITEMAP_PATHS = [
     "/", "/work", "/work/case-studies", "/services",
     "/services/technical-articles", "/services/developer-tutorials",
     "/services/product-led-content", "/services/technical-thought-leadership",
+    "/services/technical-content-distribution",
     "/about", "/insights", "/contact",
 ]
 

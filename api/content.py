@@ -292,6 +292,23 @@ SERVICES = [
         ],
         "approach": "I interview the author, identify the central claim, test it against the available evidence, and write the reasoning so readers can follow how the conclusion was reached.",
     },
+    {
+        "slug": "technical-content-distribution",
+        "title": "Technical Content Distribution",
+        "card": "Organic distribution across developer communities and social platforms to help published content reach the right readers.",
+        "tagline": "Put technical content in front of the developers it was written for.",
+        "what_it_is": "Distribution for published technical content across developer communities, Reddit, LinkedIn, X, and other relevant channels.",
+        "who_for": "AI and developer tool companies that want their articles to reach developers beyond search.",
+        "deliverables": [
+            "Distribution strategy and channel selection",
+            "Platform-specific social copy",
+            "Organic seeding in relevant developer communities",
+            "Discussion monitoring and follow-up",
+            "Performance reporting and iteration",
+        ],
+        "approach": "I adapt the core idea to each platform and share it where the topic already fits. Each post leads with the problem or insight, giving developers a reason to join the discussion and read the full article.",
+        "proof": "300K+ impressions across LinkedIn and X in three months.",
+    },
 ]
 
 # ------------------------------------------------------------------ insights / newsletter
@@ -416,6 +433,7 @@ PROJECT_TYPES = [
     "Developer tutorial",
     "Product-led content",
     "Thought leadership",
+    "Technical content distribution",
     "Content strategy",
     "Other",
 ]
