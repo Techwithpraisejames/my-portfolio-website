@@ -33,6 +33,17 @@ WORK = [
         "featured": True,
     },
     {
+        "title": "Best Browserbase Alternative for Protected Web Access",
+        "url": "https://www.zenrows.com/blog/best-browserbase-alternative-for-protected-web-access",
+        "publication": "Zenrows",
+        "format": "Benchmark",
+        "services": ["product-led-content"],
+        "summary": "A benchmark of Zenrows and Browserbase across four protected targets, comparing success rates, cost, and developer experience.",
+        "personal_note_label": "What I tested",
+        "personal_note": "I tested both platforms on the same protected targets and reported the method alongside the results.",
+        "featured": False,
+    },
+    {
         "title": "Build a Stateful Web Research Agent with Zenrows and LangGraph",
         "url": "https://dev.to/zenrows/how-to-build-a-stateful-web-research-agent-with-zenrows-and-langgraph-1co7",
         "publication": "DEV.to",
