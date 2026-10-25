@@ -26,20 +26,46 @@ def render() -> str:
     )
     body = f"""
 <section class="section">
-  <div class="container prose" style="max-width:720px">
-    <span class="eyebrow">About</span>
-    <h1>I'm Praise James, a technical writer covering AI, machine learning, developer tools, and software infrastructure.</h1>
+  <div class="container about-intro">
+    <div class="prose">
+      <span class="eyebrow">About</span>
+      <h1>I'm Praise James, a technical writer covering AI, machine learning, developer tools, and software infrastructure.</h1>
 
-    <p>My background in mathematics shaped how I approach technical subjects. I trace ideas back to the source, follow the reasoning, and check each claim before deciding how to explain it.</p>
+      <p>I started in travel writing, then learned Python for data science and found my way into AI and machine learning.</p>
 
-    <p>That process may involve reading a research paper, testing an API, running a benchmark, reviewing documentation, or speaking with an engineer. The method changes with the assignment, but the standard stays the same. I need to understand the subject before I can write about it.</p>
+      <p>Mathematics trained me to follow an argument until every step holds. That habit now shapes how I research, test, and explain technical subjects.</p>
+    </div>
+    <img class="about-intro__photo" src="/media/about-portrait.jpg" width="720" height="1280"
+         alt="Praise James smiling at her desk">
+  </div>
+
+  <div class="container prose" style="max-width:720px;margin-top:var(--sp-8)">
+    <h2>How I work</h2>
+    <p>I read the source material, test the product, and check each claim before I write. The method changes with the assignment, but the standard stays the same.</p>
 
     <h2>What I write</h2>
     <p>My work includes developer tutorials, architecture guides, technical comparisons, industry analysis, and thought leadership. I have written for companies including Actian, Bright Data, Zenrows, and ToolJet.</p>
 
-    <h2>What the reader leaves with</h2>
-    <p>The strongest technical content gives the reader something useful to carry away. Sometimes that is working code. Sometimes it is a framework, a technical decision, or a clearer view of the market. I decide what that outcome should be before I begin the draft.</p>
+    <h2>Beyond client work</h2>
+    <p>I publish Tech &amp; Storytelling for technical writers, make AI videos for beginners, and speak about research, editing, and technical storytelling.</p>
+  </div>
 
+  <div class="container" style="margin-top:var(--sp-7)">
+    <div class="speaking-grid">
+      <figure>
+        <img src="/media/devfest-speaking.jpg" width="800" height="1200" loading="lazy"
+             alt="Praise James speaking on stage at DevFest Lagos 2025">
+        <figcaption>Speaking about technical storytelling at DevFest Lagos 2025.</figcaption>
+      </figure>
+      <figure>
+        <img src="/media/workshop-speaking.jpg" width="1200" height="588" loading="lazy"
+             alt="Praise James teaching an editing session with a microphone">
+        <figcaption>Teaching writers to ask “so what?” of every fact.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="container prose" style="max-width:720px;margin-top:var(--sp-8)">
     <h2>Selected proof</h2>
     <dl>{metrics}</dl>
 

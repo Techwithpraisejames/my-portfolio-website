@@ -28,6 +28,8 @@ WORK = [
         "format": "Benchmark",
         "services": ["product-led-content"],
         "summary": "An original benchmark of 200 requests across 7 targets, comparing performance and cost for large-scale scraping.",
+        "personal_note_label": "Editorial choice",
+        "personal_note": "I showed the method before the verdict so readers could assess the result.",
         "featured": True,
     },
     {
@@ -37,6 +39,8 @@ WORK = [
         "format": "Developer Tutorial",
         "services": ["developer-tutorials"],
         "summary": "A tutorial for building a stateful research agent with LangGraph, retry logic, and live web scraping.",
+        "personal_note_label": "Tutorial goal",
+        "personal_note": "I built the tutorial around a complete path from setup to a working agent.",
         "featured": True,
     },
     {
@@ -46,6 +50,8 @@ WORK = [
         "format": "Developer Tutorial",
         "services": ["developer-tutorials", "product-led-content"],
         "summary": "A step-by-step guide to swapping smolagents' default web tool for a Zenrows-powered one so AI agents can read JavaScript-rendered and bot-protected pages.",
+        "personal_note_label": "Problem I solved",
+        "personal_note": "I focused on the production gaps left by the default web tool.",
         "featured": True,
     },
     {
@@ -55,6 +61,8 @@ WORK = [
         "format": "Architecture Guide",
         "services": ["technical-articles"],
         "summary": "An architecture guide for running AI at the edge with no cloud connection required.",
+        "personal_note_label": "What pulled me in",
+        "personal_note": "Different industries were solving the same offline AI problem without shared language.",
         "featured": True,
     },
     {

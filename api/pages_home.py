@@ -23,7 +23,7 @@ def _hero() -> str:
     <div class="hero__grid">
       <div>
         <h1 class="hero__title hero__reveal">Technical writer for AI and developer tool companies.</h1>
-        <p class="hero__sub hero__reveal">I write benchmarks, developer tutorials, architecture guides, and technical analysis for companies building products developers need to understand and use.</p>
+        <p class="hero__sub hero__reveal">I trace technical ideas to the source, find the argument, and turn it into content developers can follow.</p>
         <div class="btn-row hero__reveal">
           <a class="btn btn--accent" href="/work">See my work &rarr;</a>
           <a class="btn btn--ghost" href="/contact">Hire me &rarr;</a>
@@ -68,7 +68,7 @@ def _services() -> str:
 
 
 def _selected_work() -> str:
-    cards = "".join(work_card(w) for w in featured_work(4))
+    cards = "".join(work_card(w, show_note=True) for w in featured_work(4))
     return f"""
 <section class="section">
   <div class="container">
@@ -92,8 +92,9 @@ def _why() -> str:
 <section class="section">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Why Praise</span>
-      <h2>I do the work behind the writing.</h2>
+      <span class="eyebrow">How I think</span>
+      <h2>I follow the argument until it holds.</h2>
+      <p>Mathematics trained me to question conclusions that skip steps. I read the documentation, test the product, find the central argument, and build the story around it.</p>
     </div>
     <div class="pillars">{pillars}</div>
   </div>

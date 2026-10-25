@@ -98,16 +98,21 @@ def arrow_link(label: str, href: str, external: bool = False) -> str:
     return f'<a class="arrow-link" href="{href}"{rel}>{esc(label)}</a>'
 
 
-def work_card(item: dict) -> str:
+def work_card(item: dict, show_note: bool = False) -> str:
     if item.get("placeholder"):
         return f'<div class="card placeholder">{esc(item["title"])}. {esc(item["summary"])}</div>'
     meta = esc(item["publication"])
+    note = ""
+    if show_note and item.get("personal_note"):
+        label = esc(item.get("personal_note_label", "Behind the piece"))
+        note = f'<p class="card__note"><strong>{label}.</strong> {esc(item["personal_note"])}</p>'
     return f"""
 <article class="card work-card" data-format="{esc(item['format'])}">
   <span class="card__kicker">{esc(item['format'])}</span>
   <a class="card__title" href="{item['url']}" rel="noopener">{esc(item['title'])}</a>
   <span class="card__meta">{meta}</span>
   <p>{esc(item['summary'])}</p>
+  {note}
   <span class="card__foot">{arrow_link("Read article", item['url'], external=True)}</span>
 </article>
 """.strip()

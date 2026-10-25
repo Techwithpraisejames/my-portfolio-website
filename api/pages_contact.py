@@ -86,8 +86,7 @@ def render() -> str:
   <div class="container" style="max-width:720px">
     <span class="eyebrow">Hire me</span>
     <h1>Tell me what you need written.</h1>
-    <p class="lede" style="margin-top:var(--sp-5)">Share the product, audience, deliverable, and
-    timeline. I'll review the brief and reply with the next steps.</p>
+    <p class="lede" style="margin-top:var(--sp-5)">Share the project, audience, and timeline. I'll reply with the next steps.</p>
 
     <form id="project-form" style="margin-top:var(--sp-8)" novalidate>
       <div class="hp-field" aria-hidden="true">

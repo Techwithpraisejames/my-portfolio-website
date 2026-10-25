@@ -151,10 +151,17 @@ def media_praise():
 
 @app.route("/media/<name>")
 def media_responsive(name):
-    if name not in {"praise-320.jpg", "praise-720.jpg"}:
+    files = {
+        "praise-320.jpg": "praiseface-320.jpg",
+        "praise-720.jpg": "praiseface-720.jpg",
+        "about-portrait.jpg": "about-portrait.jpg",
+        "devfest-speaking.jpg": "devfest-speaking.jpg",
+        "workshop-speaking.jpg": "workshop-speaking.jpg",
+    }
+    if name not in files:
         abort(404)
     static_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "static")
-    return send_from_directory(static_dir, f"praiseface-{name.split('-')[1]}", max_age=31536000)
+    return send_from_directory(static_dir, files[name], max_age=31536000)
 
 
 @app.route("/og.jpg")
