@@ -91,7 +91,7 @@ def _selected_work() -> str:
     <div class="section-head">
       <span class="eyebrow">Selected work</span>
       <h2>Technical work you can evaluate.</h2>
-      <p>Published for {names}. Read the research, code, explanations, and decisions behind the work.</p>
+      <p>Published for <strong class="client-list">{names}.</strong> Read the research, code, explanations, and decisions behind the work.</p>
     </div>
     <div class="grid grid--2">{cards}</div>
     <p style="margin-top:var(--sp-6)">{arrow_link("Browse the full portfolio", "/work")}</p>
