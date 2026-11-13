@@ -156,6 +156,7 @@ def media_responsive(name):
         "praise-320.jpg": "praiseface-320.jpg",
         "praise-720.jpg": "praiseface-720.jpg",
         "about-portrait.jpg": "about-portrait.jpg",
+        "about-portrait-pink.webp": "about-portrait-pink.webp",
         "devfest-speaking.jpg": "devfest-speaking.jpg",
         "workshop-speaking.jpg": "workshop-speaking.jpg",
         "storytelling-belief.webp": "storytelling-belief.webp",

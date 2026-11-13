@@ -36,7 +36,7 @@ def render() -> str:
       <p class="lede">I build with AI, write about the systems behind it, teach what I learn, and help technical work reach the people it was made for.</p>
       <p>I started in travel writing, learned Python for data science, and moved into AI and machine learning. My mathematics background taught me to follow an argument until every step holds. That same habit now shapes how I test products, explain technical ideas, and lead developer conversations.</p>
     </div>
-    <img class="about-intro__photo" src="/media/about-portrait.jpg" width="720" height="1280" alt="Praise James smiling at her desk">
+    <img class="about-intro__photo" src="/media/about-portrait-pink.webp" width="768" height="768" alt="Praise James, developer advocate, technical writer and AI engineer">
   </div>
 </section>
 
