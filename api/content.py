@@ -413,16 +413,16 @@ PROCESS = [
 # ------------------------------------------------------------------ media / social
 
 VIDEOS = [
+    {"id": "bJuibUsvf2s", "title": "AI From Scratch"},
+    {"id": "1YDNWFDSLgU", "title": "AI From Scratch"},
     {"id": "NiWYwSMqETk", "title": "Run LLMs Locally with Docker Model Runner"},
-    {"id": "iW7VrXRgg0A", "title": "What Is a Decision Tree in Machine Learning?"},
-    {"id": "Z0yx9Pt7-rQ", "title": "Build an AI Agent with Airtop"},
     {"id": "I8-74gSKQ80", "title": "20 AI Terms You Need to Understand"},
-    {"id": "84oDAPn7kls", "title": "Run LLMs Locally with Ollama"},
 ]
 YOUTUBE_CHANNEL = "https://www.youtube.com/channel/UCwVDq2mG2FuNCRzAf-ypLvg"
 
 SOCIALS = [
     {"name": "LinkedIn", "url": "https://www.linkedin.com/in/praise-james-608b91284"},
+    {"name": "Instagram", "url": "https://www.instagram.com/techwithpraisejames"},
     {"name": "YouTube", "url": YOUTUBE_CHANNEL},
     {"name": "Newsletter", "url": "https://techwithpraisejames.substack.com/"},
     {"name": "Medium", "url": "https://medium.com/@techwithpraisejames"},
@@ -436,7 +436,7 @@ CONTACT_EMAIL = "techwithpraisejames@gmail.com"
 METRICS = [
     {"value": "125K+", "label": "organic views across 50+ published articles"},
     {"value": "300K+", "label": "impressions across LinkedIn and X in three months"},
-    {"value": "500", "label": "developer subscribers in the first month of The Mamba Brief, where I serve as editorial lead"},
+    {"value": "700+", "label": "Mamba Brief subscribers reached in less than six months"},
 ]
 
 PROJECT_TYPES = [

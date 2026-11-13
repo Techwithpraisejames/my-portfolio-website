@@ -1,14 +1,14 @@
-"""/about page. Human, not a resume."""
+"""About Praise: technical depth, communication and community."""
 from components import breadcrumbs, cta_band, esc
 from content import METRICS, SOCIALS, VIDEOS, YOUTUBE_CHANNEL
 from seo import PageMeta, breadcrumb_list, person
 from shell import render_page
 
 META = PageMeta(
-    title="About Praise James | AI and developer tools writer",
+    title="About Praise James | Developer Advocate and AI Engineer",
     description=(
-        "Praise James is a technical writer covering AI, machine learning, developer tools, and "
-        "software infrastructure, with a background in mathematics."
+        "Praise James is a developer advocate, technical writer and AI engineer who builds, "
+        "explains and speaks about AI and developer technology."
     ),
     path="/about",
 )
@@ -16,9 +16,12 @@ META = PageMeta(
 
 def render() -> str:
     metrics = "".join(
-        f'<div class="cs-row"><dt>{esc(m["value"])}</dt><dd>{esc(m["label"])}</dd></div>' for m in METRICS
+        f'<div class="cs-row"><dt>{esc(m["value"])}</dt><dd>{esc(m["label"])}</dd></div>'
+        for m in METRICS
     )
-    links = "".join(f'<li><a href="{s["url"]}" rel="noopener">{esc(s["name"])}</a></li>' for s in SOCIALS)
+    links = "".join(
+        f'<li><a href="{s["url"]}" rel="noopener">{esc(s["name"])}</a></li>' for s in SOCIALS
+    )
     videos = "".join(
         f'<iframe src="https://www.youtube.com/embed/{v["id"]}" title="{esc(v["title"])}" '
         f'loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>'
@@ -29,65 +32,57 @@ def render() -> str:
   <div class="container about-intro">
     <div class="prose">
       <span class="eyebrow">About</span>
-      <h1>I'm Praise James, a technical writer covering AI, machine learning, developer tools, and software infrastructure.</h1>
-
-      <p>I started in travel writing, then learned Python for data science and found my way into AI and machine learning.</p>
-
-      <p>Mathematics trained me to follow an argument until every step holds. That habit now shapes how I research, test, and explain technical subjects.</p>
+      <h1>I work where AI engineering, technical storytelling, and developer advocacy meet.</h1>
+      <p class="lede">I build with AI, write about the systems behind it, teach what I learn, and help technical work reach the people it was made for.</p>
+      <p>I started in travel writing, learned Python for data science, and moved into AI and machine learning. My mathematics background taught me to follow an argument until every step holds. That same habit now shapes how I test products, explain technical ideas, and lead developer conversations.</p>
     </div>
-    <img class="about-intro__photo" src="/media/about-portrait.jpg" width="720" height="1280"
-         alt="Praise James smiling at her desk">
+    <img class="about-intro__photo" src="/media/about-portrait.jpg" width="720" height="1280" alt="Praise James smiling at her desk">
   </div>
+</section>
 
-  <div class="container prose" style="max-width:720px;margin-top:var(--sp-8)">
-    <h2>How I work</h2>
-    <p>I read the source material, test the product, and check each claim before I write. The method changes with the assignment, but the standard stays the same.</p>
-
-    <h2>What I do</h2>
-    <p>I write developer tutorials, architecture guides, technical comparisons, industry analysis, and thought leadership. I also distribute technical content across developer communities and social platforms.</p>
-
-    <h2>Beyond client work</h2>
-    <p>I publish Tech &amp; Storytelling for technical writers, make AI videos for beginners, and speak about research, editing, and technical storytelling.</p>
-  </div>
-
-  <div class="container" style="margin-top:var(--sp-7)">
-    <div class="speaking-grid">
-      <figure>
-        <img src="/media/devfest-speaking.jpg" width="800" height="1200" loading="lazy"
-             alt="Praise James speaking on stage at DevFest Lagos 2025">
-        <figcaption>Speaking about technical storytelling at DevFest Lagos 2025.</figcaption>
-      </figure>
-      <figure>
-        <img src="/media/workshop-speaking.jpg" width="1200" height="588" loading="lazy"
-             alt="Praise James teaching an editing session with a microphone">
-        <figcaption>Teaching writers to ask “so what?” of every fact at the Technical Writing Mentorship Program (TWMP) Meetup 1.0.</figcaption>
-      </figure>
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Across the work</span>
+      <h2>Technical enough to build it. Clear enough to explain it.</h2>
     </div>
-  </div>
-
-  <div class="container prose" style="max-width:720px;margin-top:var(--sp-8)">
-    <h2>Selected proof</h2>
-    <dl>{metrics}</dl>
-
-    <h2>Elsewhere</h2>
-    <ul class="link-list">{links}</ul>
-
-    <h2>On YouTube</h2>
-    <p>I explain AI and machine learning concepts for people building their understanding of the field.
-    <a href="{YOUTUBE_CHANNEL}" rel="noopener">See the channel</a>.</p>
-  </div>
-  <div class="container" style="margin-top:var(--sp-6)">
-    <div class="video-grid">{videos}</div>
-  </div>
-  <div class="container" style="margin-top:var(--sp-8)">
-    <div class="btn-row">
-      <a class="btn btn--accent" href="/contact">Start a project &rarr;</a>
-      <a class="btn btn--ghost" href="/work">Read my work &rarr;</a>
+    <div class="capabilities">
+      <article class="capability"><h3>Build</h3><p>I create AI projects, test developer tools, run benchmarks, and learn through working systems.</p></article>
+      <article class="capability"><h3>Explain</h3><p>I turn that technical understanding into tutorials, analysis, videos, and product stories.</p></article>
+      <article class="capability"><h3>Advocate</h3><p>I distribute content, teach developers, host conversations, and speak about storytelling in tech.</p></article>
     </div>
   </div>
 </section>
-{cta_band("Need a technical writer for your product?", "Start a project →", "/contact")}
+
+<section class="section">
+  <div class="container story-grid">
+    <img class="story-photo" src="/media/storytelling-belief.webp" width="1024" height="1536" loading="lazy" alt="Praise James speaking about storytelling at DevFest Lagos">
+    <div>
+      <span class="eyebrow">My belief</span>
+      <h2>Good technical storytelling respects how people think.</h2>
+      <p class="lede">Clear content gives people context, follows a logical path, and makes the important idea easier to remember.</p>
+      <p style="margin-top:var(--sp-5)">That principle runs through my writing, talks, workshops, videos, and developer education.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">Selected proof</span><h2>Results from the work.</h2></div>
+    <dl>{metrics}</dl>
+    <div class="prose" style="margin-top:var(--sp-8)">
+      <h2>AI From Scratch</h2>
+      <p>I teach AI engineering through practical explanations and visual breakdowns on YouTube and Instagram. <a href="{YOUTUBE_CHANNEL}" rel="noopener">See the YouTube channel</a>.</p>
+    </div>
+    <div class="video-grid" style="margin-top:var(--sp-6)">{videos}</div>
+    <div class="prose" style="margin-top:var(--sp-8)"><h2>Elsewhere</h2><ul class="link-list">{links}</ul></div>
+  </div>
+</section>
+
+{cta_band("Need someone who can build, explain, and advocate?", "Start a conversation →", "/contact")}
 """
     trail = [("Home", "/"), ("About", "/about")]
-    return render_page(META, body, path="/about", breadcrumbs_html=breadcrumbs(trail),
-                       jsonld_blocks=[person(), breadcrumb_list(trail)])
+    return render_page(
+        META, body, path="/about", breadcrumbs_html=breadcrumbs(trail),
+        jsonld_blocks=[person(), breadcrumb_list(trail)],
+    )

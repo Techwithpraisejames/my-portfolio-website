@@ -158,6 +158,10 @@ def media_responsive(name):
         "about-portrait.jpg": "about-portrait.jpg",
         "devfest-speaking.jpg": "devfest-speaking.jpg",
         "workshop-speaking.jpg": "workshop-speaking.jpg",
+        "storytelling-belief.webp": "storytelling-belief.webp",
+        "event-distribution.webp": "event-distribution.webp",
+        "event-ai-citations.webp": "event-ai-citations.webp",
+        "event-emotional-storytelling.webp": "event-emotional-storytelling.webp",
     }
     if name not in files:
         abort(404)

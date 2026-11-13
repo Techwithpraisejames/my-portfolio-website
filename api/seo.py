@@ -14,6 +14,7 @@ OG_IMAGE = SITE_URL + "/og.jpg"
 # Verified profiles only (carried from the previous site).
 SAME_AS = [
     "https://www.linkedin.com/in/praise-james-608b91284",
+    "https://www.instagram.com/techwithpraisejames",
     "https://www.youtube.com/channel/UCwVDq2mG2FuNCRzAf-ypLvg",
     "https://medium.com/@techwithpraisejames",
     "https://github.com/Techwithpraisejames",
@@ -80,14 +81,15 @@ def person() -> dict:
         "name": "Praise James",
         "url": SITE_URL + "/about",
         "image": OG_IMAGE,
-        "jobTitle": "AI and Developer Tools Technical Writer",
+        "jobTitle": "Developer Advocate, Technical Writer and AI Engineer",
         "description": (
-            "Technical writer covering AI, machine learning, developer tools, and software "
-            "infrastructure for technical companies."
+            "Developer advocate, technical writer and AI engineer who builds, explains, "
+            "and speaks about AI and developer technology."
         ),
         "knowsAbout": [
-            "Technical writing", "Artificial intelligence", "Machine learning",
-            "Developer tools", "Developer education", "Content strategy", "Vector databases",
+            "Developer advocacy", "Technical writing", "Artificial intelligence",
+            "Machine learning", "Developer tools", "Developer education", "Content strategy",
+            "Technical storytelling", "Vector databases",
         ],
         "sameAs": SAME_AS,
     }

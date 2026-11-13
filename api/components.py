@@ -64,7 +64,7 @@ def footer() -> str:
     <div class="site-footer__grid">
       <div class="site-footer__intro">
         <div class="site-footer__brand">Praise James</div>
-        <p class="site-footer__tag">Technical writer for AI and developer tool companies.</p>
+        <p class="site-footer__tag">Developer advocate, technical writer, and AI engineer helping technical ideas reach people.</p>
       </div>
       <nav class="site-footer__group" aria-labelledby="footer-explore">
         <h2 class="site-footer__heading" id="footer-explore">Explore</h2>
@@ -75,7 +75,7 @@ def footer() -> str:
         <ul class="site-footer__links">{social}</ul>
       </nav>
     </div>
-    <p class="site-footer__legal">&copy; 2026 Praise James. Technical writer &middot; AI/ML &middot; Developer tools.</p>
+    <p class="site-footer__legal">&copy; 2026 Praise James. Developer advocacy · AI engineering · Technical storytelling.</p>
   </div>
 </footer>
 """.strip()

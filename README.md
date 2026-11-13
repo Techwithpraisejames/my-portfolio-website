@@ -1,7 +1,8 @@
 # Praise James portfolio and client-acquisition site
 
-A specialist technical writer's site: positioning, proof, services, case studies,
-and a single conversion path to `/contact`. Server-rendered, no client-side framework.
+A developer advocate, technical writer, and AI engineer's portfolio: positioning,
+proof, services, case studies, speaking, and a single conversion path to `/contact`.
+Server-rendered, with no client-side framework.
 
 ## Tech stack
 
