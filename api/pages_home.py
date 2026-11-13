@@ -46,7 +46,7 @@ def _proof() -> str:
     <div class="proof-grid" aria-label="Selected outcomes">
       <div class="proof-item"><strong>125K+</strong><span>organic views across 50+ published technical articles</span></div>
       <div class="proof-item"><strong>300K+</strong><span>impressions across LinkedIn and X in three months</span></div>
-      <div class="proof-item"><strong>700+</strong><span>subscribers for Mamba Brief, an AI newsletter I grew in less than six months</span></div>
+      <div class="proof-item"><strong>700+</strong><span>subscribers for Mamba Brief, a developer-focused newsletter I grew in less than six months</span></div>
     </div>
   </div>
 </section>
